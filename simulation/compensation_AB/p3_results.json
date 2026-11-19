@@ -1,0 +1,144 @@
+{
+ "model_fit": {
+  "Gi": 12.4,
+  "Q": 0.35
+ },
+ "fra_A_20V": {
+  "fc_Hz": 3560.020612507968,
+  "PM_deg": 54.37427125503234,
+  "GM_dB_lower_bound": 21.3581101962297,
+  "f_max_Hz": 16000.0
+ },
+ "model_A_20V": {
+  "fc_Hz": 2977.557321818965,
+  "PM_deg": 62.205583093080726,
+  "GM_dB_lower_bound": 28.700639536549048,
+  "f_max_Hz": 40000.00000000001
+ },
+ "fra_B_20V": {
+  "fc_Hz": 1625.5536897557681,
+  "PM_deg": 66.47093398066511,
+  "GM_dB_lower_bound": 27.401339587849584,
+  "f_max_Hz": 16000.0
+ },
+ "model_B_20V": {
+  "fc_Hz": 1604.302622348795,
+  "PM_deg": 66.34915937695766,
+  "GM_dB_lower_bound": 34.18638918012596,
+  "f_max_Hz": 40000.00000000001
+ },
+ "fra_A_48V": {
+  "fc_Hz": 3015.4130663078167,
+  "PM_deg": 63.990387642600005,
+  "GM_dB_lower_bound": 18.79018125312847,
+  "f_max_Hz": 16000.0
+ },
+ "model_A_48V": {
+  "fc_Hz": 2977.557321818965,
+  "PM_deg": 62.205583093080726,
+  "GM_dB_lower_bound": 28.700639536549048,
+  "f_max_Hz": 40000.00000000001
+ },
+ "fra_B_48V": {
+  "fc_Hz": 1683.9829141732157,
+  "PM_deg": 70.27370440238141,
+  "GM_dB_lower_bound": 23.7123397148468,
+  "f_max_Hz": 16000.0
+ },
+ "model_B_48V": {
+  "fc_Hz": 1604.302622348795,
+  "PM_deg": 66.34915937695766,
+  "GM_dB_lower_bound": 34.18638918012596,
+  "f_max_Hz": 40000.00000000001
+ },
+ "load_A_20V_unload": {
+  "peak_dev_mV": 158.5914773067003,
+  "t_peak_us": 77.50000000107845,
+  "settle_60mV_ms": 0.30300000000130395,
+  "recovery_overshoot_mV": 2.616707346225766,
+  "v_final": 11.998981532634625
+ },
+ "load_A_20V_load": {
+  "peak_dev_mV": -155.3335285537276,
+  "t_peak_us": 80.00000000508122,
+  "settle_60mV_ms": 0.32700000000532825,
+  "recovery_overshoot_mV": 4.26724408540835,
+  "v_final": 11.99808669628572
+ },
+ "load_A_20V_ripple_mVpp": 24.369239807128906,
+ "load_B_20V_unload": {
+  "peak_dev_mV": 262.03834514876513,
+  "t_peak_us": 181.50000000118246,
+  "settle_60mV_ms": 0.56900000000157,
+  "recovery_overshoot_mV": 6.800672906312144,
+  "v_final": 11.99863933696679
+ },
+ "load_B_20V_load": {
+  "peak_dev_mV": -266.1449322624687,
+  "t_peak_us": 175.00000000517622,
+  "settle_60mV_ms": 0.5915000000055928,
+  "recovery_overshoot_mV": 8.277179822664849,
+  "v_final": 11.99862140976913
+ },
+ "load_B_20V_ripple_mVpp": 19.22321319580078,
+ "load_A_48V_unload": {
+  "peak_dev_mV": 154.1870651840469,
+  "t_peak_us": 86.00000000108695,
+  "settle_60mV_ms": 0.29200000000129295,
+  "recovery_overshoot_mV": 2.83877221902884,
+  "v_final": 11.998331992081516
+ },
+ "load_A_48V_load": {
+  "peak_dev_mV": -150.8885377877398,
+  "t_peak_us": 86.50000000508771,
+  "settle_60mV_ms": 0.29450000000529575,
+  "recovery_overshoot_mV": 1.2773446456257886,
+  "v_final": 11.998722276870142
+ },
+ "load_A_48V_ripple_mVpp": 34.50965881347656,
+ "load_B_48V_unload": {
+  "peak_dev_mV": 269.9672607031562,
+  "t_peak_us": 171.00000000117194,
+  "settle_60mV_ms": 0.566000000001567,
+  "recovery_overshoot_mV": 5.043224864257567,
+  "v_final": 11.998373088062413
+ },
+ "load_B_48V_load": {
+  "peak_dev_mV": -261.4659517999218,
+  "t_peak_us": 172.00000000517323,
+  "settle_60mV_ms": 0.5685000000055698,
+  "recovery_overshoot_mV": 4.399069149757295,
+  "v_final": 11.997463246000029
+ },
+ "load_B_48V_ripple_mVpp": 35.526275634765625,
+ "line_A_20V_rise": {
+  "peak_dev_mV": 49.73677384669628,
+  "t_peak_us": 107.50000000110845,
+  "settle_60mV_ms": 0.0,
+  "recovery_overshoot_mV": 27.091131960455428,
+  "v_final": 11.997719551301154
+ },
+ "line_A_20V_fall": {
+  "peak_dev_mV": 12.05748749917035,
+  "t_peak_us": 1325.500000006327,
+  "settle_60mV_ms": 0.0,
+  "recovery_overshoot_mV": 5.0071648585863215,
+  "v_final": 11.998472095806148
+ },
+ "line_A_20V_ripple_mVpp": 19.666671752929688,
+ "line_B_20V_rise": {
+  "peak_dev_mV": 59.65092149992124,
+  "t_peak_us": 126.00000000112695,
+  "settle_60mV_ms": 0.0,
+  "recovery_overshoot_mV": 35.84079102297544,
+  "v_final": 11.999664108041053
+ },
+ "line_B_20V_fall": {
+  "peak_dev_mV": 13.162352844910075,
+  "t_peak_us": 1388.0000000063894,
+  "settle_60mV_ms": 0.0,
+  "recovery_overshoot_mV": 6.440783435840203,
+  "v_final": 11.999947695478099
+ },
+ "line_B_20V_ripple_mVpp": 23.654937744140625
+}

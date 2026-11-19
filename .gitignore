@@ -1,0 +1,22 @@
+# simulation outputs (large, regenerated)
+*.raw
+*.qraw
+*.op.raw
+*.fft
+*.state
+*.db
+*.log.bak
+# KiCad local state / backups
+*-backups/
+*.kicad_prl
+fp-info-cache
+*.lck
+_autosave-*
+# work folders
+build/
+__pycache__/
+*.pyc
+# third-party models / datasheets that must be downloaded by the user
+simulation/**/models/infineon/
+docs/datasheets/
+*.net

@@ -1,0 +1,97 @@
+(footprint "TestPoint_D0p8"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "0.8 mm bare copper microprobe land; 1.2 mm courtyard; no paste")
+	(property "Reference" "TP15"
+		(at 0 -1.5 0)
+		(layer "F.Fab")
+		(uuid "9025b50a-b931-41ec-91ca-0747f49d3577")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PGOOD"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "501398dc-bff9-4b76-972b-72a55d63dfd6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dcbe4d3e-8a52-4896-b723-a9917f4cda11")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31835a97-75e2-42c9-b56b-2977b56f003e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MPN" "PCB copper pad"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a7fafa84-a8f9-4533-8b97-5627166ef83a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Qualification" "Engineering review"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "13b101bf-2e54-4551-87d3-296cf6d635fe")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 0.6 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "b2cea1b2-d3ef-455a-af67-6aba92a148e0")
+	)
+	(pad "1" smd circle
+		(at 0 0)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Mask")
+		(solder_mask_margin 0.05)
+		(uuid "ff8df692-cddc-4086-ae16-ade12f872cad")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,34 @@
+fsw = 94.3 kHz, L = 33 uH, Cout = 660 uF (ESR 8 mOhm)
+
+Vin   P    D     dIL(A) IL,pk  IQ1rms IQ2rms ICin,rms  ripple(mVpp)  Ploss(W)  eff(%)
+ 20   60  0.600   1.54   5.77   3.89   3.17    2.45       15.4       1.13    98.16
+ 24   60  0.500   1.93   5.96   3.56   3.56    2.50       19.3       1.16    98.10
+ 36   60  0.333   2.57   6.29   2.92   4.13    2.36       25.7       1.28    97.91
+ 48   60  0.250   2.89   6.45   2.53   4.39    2.17       28.9       1.41    97.70
+ 20   90  0.600   1.54   8.27   5.82   4.75    3.67       15.4       2.13    97.69
+ 24   90  0.500   1.93   8.46   5.32   5.32    3.75       19.3       2.16    97.66
+ 36   90  0.333   2.57   8.79   4.35   6.15    3.54       25.7       2.30    97.51
+ 48   90  0.250   2.89   8.95   3.77   6.54    3.25       28.9       2.46    97.34
+
+loss breakdown (W) at 48 V / 60 W:
+  q1_cond          0.039
+  q1_sw            0.363
+  q2_cond          0.075
+  deadtime         0.023
+  qrr              0.181
+  gate             0.092
+  inductor_dcr     0.481
+  shunt            0.100
+  cout_esr         0.006
+  ideal_diode      0.006
+  controller_aux   0.046
+
+hand-calculated 4-point average efficiency at 60 W: 97.97 %  (bonus B = 18.0 points if measured like this)
+
+stresses: VDS(Q1,Q2) = Vin,max = 48 V + ringing (sim 49.6 V) vs 80 V rating -> 60 % derating OK
+  L1 peak current at 48 V / 90 W: 8.95 A vs Isat 16.7 A, Irms 8.6 A (20 C rise)
+  CIN RMS current max: 3.75 A shared by 10 x 1210 + 3 electrolytics
+  compensation A: fc ~ 3269 Hz
+  compensation B: fc ~ 1555 Hz
+
+Q1 at 48 V / 90 W: 0.81 W -> Tj = 40 C + 38 K/W x P = 71 C (copper + 12 vias, no heatsink)

@@ -1,0 +1,47 @@
+LTspice 26.1.1 for Windows
+Circuit: LTspice_RevF1\RevF1_H2_48V_60W.cir
+Start Time: Thu Nov 12 01:04:01 2026
+Options:plotwinsize=0 threads=1 Thev_Induc=1 reltol=0.003 itl4=200 cshunt=1e-15
+solver = Normal
+Maximum thread count: 1
+tnom = 27
+temp = 27
+method = trap
+reltol = 0.003
+C1: Increased Cpar to 3.3e-10
+CinBulk: Increased Cpar to 3e-10
+CinCer: Increased Cpar to 1e-11
+Chf: Increased Cpar to 3e-13
+Instance "xq1:M1": Width narrower than recommended for a level 3 MOSFET.
+Instance "xq2:M1": Width narrower than recommended for a level 3 MOSFET.
+State file "LTspice_RevF1\RevF1_H_prime27_48V.state" loaded successfully.
+Changing Tseed to 3.08102e-07
+Changing Tseed to 3.08102e-09
+Changing Tseed to 3.08102e-06
+Warning: Simulation tolerance relaxed to achieve convergence from 1.2132463902787672e-02 to 1.2132463902787773e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.2397613148272410e-02 to 1.2397613148272511e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.2482417365584426e-02 to 1.2482417365584527e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.2514259661366321e-02 to 1.2514259661366421e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.2980801577238838e-02 to 1.2980801577238939e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.3267084018203599e-02 to 1.3267084018203699e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.3383741535933741e-02 to 1.3383741535933842e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.3521598028682436e-02 to 1.3521598028682537e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.5971231307327461e-02 to 1.5971231307327562e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.7275611267037288e-02 to 1.7275611267037388e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.7848267003829743e-02 to 1.7848267003829844e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.7922530107697891e-02 to 1.7922530107697992e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.9067919856514206e-02 to 1.9067919856514307e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.9460298955632303e-02 to 1.9460298955632404e-02 seconds.
+Warning: Simulation tolerance relaxed to achieve convergence from 1.9767856306395177e-02 to 1.9767856306395278e-02 seconds.
+Total elapsed time: 298.929 seconds.
+Total iterations: 3953891
+
+Files loaded:
+LTspice_RevF1\RevF1_H2_48V_60W.cir
+LTspice_RevF1\models\LTC3895.sub
+LTspice_RevF1\models\LT6105.lib
+LTspice_RevF1\models\LT1636.lib
+LTspice_RevF1\models\LT6654-1.25.sub
+LTspice_RevF1\models\RevD_diodes.lib
+models\infineon\OptiMOS5\OptiMOS5_80V_LTSpice.lib
+

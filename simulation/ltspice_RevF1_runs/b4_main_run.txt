@@ -1,0 +1,14 @@
+RevF1_F_20V_60W                          ok           349s
+RevF1_F_24V_60W                          ok           350s
+RevF1_F_36V_60W                          ok           358s
+RevF1_F_48V_60W                          ok           325s
+RevF1_F_20V_90W                          ok           361s
+RevF1_F_48V_90W                          ok           161s
+RevF1_F_limit13_48V_27                   ok           536s
+RevF1_F_limit13_48V_hot70_L20n           ok           505s
+RevF1_F_fra_20V                          ok           791s
+RevF1_F_fra_24V                          ok           767s
+RevF1_F_fra_36V                          ok           744s
+RevF1_F_fra_48V                          ok           716s
+RevF1_F_reverse48_only                   ok             4s
+RevF1_F_reverse48_then24V                ok           514s

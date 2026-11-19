@@ -1,0 +1,4 @@
+RevF1_OPc_prime27                        ok           196s
+RevF1_OPc_prime70                        ok           191s
+RevF1_OPd_prime27                        ok           195s
+RevF1_OPd_prime70                        ok           158s

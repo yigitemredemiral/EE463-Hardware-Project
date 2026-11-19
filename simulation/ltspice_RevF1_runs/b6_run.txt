@@ -1,0 +1,7 @@
+RevF1_FA_20V_90W                         ok           202s
+RevF1_FA_48V_90W                         ok           192s
+RevF1_FA_limit13_48V_27                  ok           302s
+RevF1_FA_limit13_48V_hot70_L20n          ok           266s
+RevF1_FA_start_20V_6A_90W                ok           612s
+RevF1_FA_start_36V_3A_90W                ok           605s
+RevF1_FA_start_48V_3A_90W                ok           586s

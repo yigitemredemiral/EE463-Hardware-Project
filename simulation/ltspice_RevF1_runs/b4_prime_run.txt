@@ -1,0 +1,8 @@
+RevF1_F_prime27_20V                      ok           316s
+RevF1_F_prime27_24V                      ok           318s
+RevF1_F_prime27_36V                      ok           335s
+RevF1_F_prime27_48V                      ok           312s
+RevF1_F_prime70_48V                      ok           290s
+RevF1_F_start_20V_6A_90W                 ok          1004s
+RevF1_F_start_36V_3A_90W                 ok           957s
+RevF1_F_start_48V_3A_90W                 ok           928s

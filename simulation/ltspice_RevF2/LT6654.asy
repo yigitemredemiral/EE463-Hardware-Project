@@ -1,0 +1,20 @@
+Version 4
+SymbolType CELL
+RECTANGLE Normal -64 -64 64 64
+WINDOW 0 0 -72 Bottom 2
+WINDOW 3 0 72 Top 2
+SYMATTR Value LT6654-1.25
+SYMATTR Prefix X
+SYMATTR Description 1.25 V reference (ADI model models/LT6654-1.25.sub)
+LINE Normal 0 96 0 64
+PIN 0 96 BOTTOM 8
+PINATTR PinName GND
+PINATTR SpiceOrder 1
+LINE Normal -96 0 -64 0
+PIN -96 0 LEFT 8
+PINATTR PinName IN
+PINATTR SpiceOrder 2
+LINE Normal 96 0 64 0
+PIN 96 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 3

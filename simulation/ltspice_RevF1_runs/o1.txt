@@ -1,0 +1,1 @@
+RevF1_Oe_20V_60W RevF1_Oe_24V_60W RevF1_Oe_36V_60W RevF1_Oe_48V_60W RevF1_Oe_48V_90W RevF1_Oe_fault_48V_hot70_L20n RevF1_Od_fault_48V_hot70_L20n RevF1_Oc_fault_48V_hot70_L20n

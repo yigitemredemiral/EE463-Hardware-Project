@@ -1,0 +1,1 @@
+RevF1_e_20V_60W RevF1_e_24V_60W RevF1_e_36V_60W RevF1_e_20V_90W RevF1_e_short_48V_hot70_L20n RevF1_F_prime27 RevF1_F_prime70 RevF1_F_reverse48_then24V

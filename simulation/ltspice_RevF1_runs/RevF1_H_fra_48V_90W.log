@@ -1,0 +1,55 @@
+LTspice 26.1.1 for Windows
+Circuit: LTspice_RevF1\RevF1_H_fra_48V_90W.cir
+Start Time: Thu Nov 12 00:54:37 2026
+Options:plotwinsize=0 threads=1 Thev_Induc=1 reltol=0.003 abstol=1e-9 vntol=1e-5 itl4=200 cshunt=1e-15
+solver = Normal
+Maximum thread count: 1
+tnom = 27
+temp = 27
+method = trap
+abstol = 1e-09
+reltol = 0.003
+volttol = 1e-05
+FRA @LOOP - Simultaneous frequencies [50000] Hz applied from time 0.003 to 0.0050066 sec
+FRA @LOOP - Simultaneous frequencies [45254.8] Hz applied from time 0.0050066 to 0.00702483 sec
+FRA @LOOP - Simultaneous frequencies [32000] Hz applied from time 0.00702483 to 0.00902733 sec
+FRA @LOOP - Simultaneous frequencies [22627.4] Hz applied from time 0.00902733 to 0.0110473 sec
+FRA @LOOP - Simultaneous frequencies [16000] Hz applied from time 0.0110473 to 0.0130523 sec
+FRA @LOOP - Simultaneous frequencies [11313.7] Hz applied from time 0.0130523 to 0.0151201 sec
+FRA @LOOP - Simultaneous frequencies [8000] Hz applied from time 0.0151201 to 0.0171301 sec
+FRA @LOOP - Simultaneous frequencies [5656.85] Hz applied from time 0.0171301 to 0.0192049 sec
+FRA @LOOP - Simultaneous frequencies [4000] Hz applied from time 0.0192049 to 0.0212249 sec
+FRA @LOOP - Simultaneous frequencies [2828.43] Hz applied from time 0.0212249 to 0.0233138 sec
+FRA @LOOP - Simultaneous frequencies [2000] Hz applied from time 0.0233138 to 0.0253538 sec
+FRA @LOOP - Simultaneous frequencies [1414.21] Hz applied from time 0.0253538 to 0.0278246 sec
+FRA @LOOP - Simultaneous frequencies [1000] Hz applied from time 0.0278246 to 0.0299046 sec
+FRA @LOOP - Simultaneous frequencies [707.107] Hz applied from time 0.0299046 to 0.0324319 sec
+FRA @LOOP - Simultaneous frequencies [500] Hz applied from time 0.0324319 to 0.0355919 sec
+C1: Increased Cpar to 3.3e-10
+CinBulk: Increased Cpar to 3e-10
+CinCer: Increased Cpar to 1e-11
+Chf: Increased Cpar to 3e-13
+Instance "xq1:M1": Width narrower than recommended for a level 3 MOSFET.
+Instance "xq2:M1": Width narrower than recommended for a level 3 MOSFET.
+State file "LTspice_RevF1\RevF1_H_prime27_48V.state" loaded successfully.
+Changing Tseed to 3.08102e-07
+Changing Tseed to 3.08102e-09
+Changing Tseed to 3.08102e-06
+Changing Tseed to 3.08102e-10
+Total elapsed time: 313.816 seconds.
+Total iterations: 8921198
+
+Files loaded:
+LTspice_RevF1\RevF1_H_fra_48V_90W.cir
+LTspice_RevF1\models\LTC3895.sub
+LTspice_RevF1\models\LT6105.lib
+LTspice_RevF1\models\LT1636.lib
+LTspice_RevF1\models\LT6654-1.25.sub
+LTspice_RevF1\models\RevD_diodes.lib
+models\infineon\OptiMOS5\OptiMOS5_80V_LTSpice.lib
+
+FRA Instance @LOOP: Insufficient number of time points for 50000 Hz; skipping analysis of this frequency.
+FRA Instance @LOOP: Insufficient number of time points for 45254.8 Hz; skipping analysis of this frequency.
+FRA Instance @LOOP: Insufficient number of time points for 32000 Hz; skipping analysis of this frequency.
+FRA Instance @LOOP: Insufficient number of time points for 22627.4 Hz; skipping analysis of this frequency.
+FRA Instance @0: F(0dB) = 3.203 kHz, Phase Margin = 66.1 degrees, Gain Margin not found (phase does not cross 0 degrees).

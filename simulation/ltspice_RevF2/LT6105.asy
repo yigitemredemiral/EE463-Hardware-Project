@@ -1,0 +1,32 @@
+Version 4
+SymbolType CELL
+RECTANGLE Normal -64 -64 64 64
+WINDOW 0 0 -72 Bottom 2
+WINDOW 3 0 72 Top 2
+SYMATTR Value LT6105
+SYMATTR Prefix X
+SYMATTR Description Current sense amplifier (ADI model models/LT6105.lib)
+LINE Normal -96 32 -64 32
+PIN -96 32 LEFT 8
+PINATTR PinName -IN
+PINATTR SpiceOrder 1
+LINE Normal 0 -96 0 -64
+PIN 0 -96 TOP 8
+PINATTR PinName V+
+PINATTR SpiceOrder 2
+LINE Normal 0 96 0 64
+PIN 0 96 BOTTOM 8
+PINATTR PinName V-
+PINATTR SpiceOrder 3
+LINE Normal 96 0 64 0
+PIN 96 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 4
+LINE Normal 96 32 64 32
+PIN 96 32 RIGHT 8
+PINATTR PinName NC
+PINATTR SpiceOrder 5
+LINE Normal -96 -32 -64 -32
+PIN -96 -32 LEFT 8
+PINATTR PinName +IN
+PINATTR SpiceOrder 6

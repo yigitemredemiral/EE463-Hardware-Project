@@ -1,0 +1,7 @@
+RevF1_G_fra90_20V                        ok           900s
+RevF1_G_fra90_48V                        ok           978s
+RevF1_G_short_48V_27                     ok           652s
+RevF1_G_short_48V_70_hot_L20n            ok           590s
+RevF1_G_short_20V_27                     ok           680s
+RevF1_G_20V_90W                          ok           506s
+RevF1_G500_20V_90W                       ok           493s

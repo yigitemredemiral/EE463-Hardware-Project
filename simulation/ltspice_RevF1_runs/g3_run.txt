@@ -1,0 +1,4 @@
+RevF1_G_hotplug48_cable1u_lb20n          ok           606s
+RevF1_G_hotplug48_cable1u_lb20n_ccath1u  ok           574s
+RevF1_G_hotplug48_cable0p5u_lb20n        ok           619s
+RevF1_G_hotplug48_cable0p5u_lb20n_ccath1u ok           565s

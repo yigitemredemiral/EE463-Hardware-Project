@@ -1,0 +1,12 @@
+RevF1_H_20V_60W                          ok           218s
+RevF1_H_24V_60W                          ok           224s
+RevF1_H_36V_60W                          ok           222s
+RevF1_H_48V_60W                          ok            58s
+RevF1_H_20V_90W                          ok           216s
+RevF1_H_48V_90W                          ok           226s
+RevF1_H_48V_90W_hot70_L20n               ok           197s
+RevF1_H_limit13_48V_hot70_L20n           ok           226s
+RevF1_H_short13_48V_hot70_L20n           ok            98s
+RevF1_H_fra_20V_60W                      ok           538s
+RevF1_H_fra_20V_90W                      ok           511s
+RevF1_H_fra_48V_90W                      ok           315s

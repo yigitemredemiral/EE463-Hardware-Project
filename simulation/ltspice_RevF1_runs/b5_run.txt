@@ -1,0 +1,8 @@
+RevF1_F_fraA_20V                         ok           771s
+RevF1_F_fraA_24V                         ok           772s
+RevF1_F_fraA_36V                         ok           773s
+RevF1_F_fraA_48V                         ok           737s
+RevF1_F_fraB_20V                         ok           792s
+RevF1_F_fraB_24V                         ok           780s
+RevF1_F_fraB_36V                         ok           761s
+RevF1_F_fraB_48V                         ok           740s

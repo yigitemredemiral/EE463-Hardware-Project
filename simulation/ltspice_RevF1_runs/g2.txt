@@ -1,0 +1,1 @@
+RevF1_G_fra90_20V RevF1_G_fra90_48V RevF1_G_short_48V_27 RevF1_G_short_48V_70_hot_L20n RevF1_G_short_20V_27 RevF1_G_20V_90W RevF1_G500_20V_90W

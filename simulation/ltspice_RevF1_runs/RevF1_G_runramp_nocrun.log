@@ -1,0 +1,29 @@
+LTspice 26.1.1 for Windows
+Circuit: LTspice_RevF1\RevF1_G_runramp_nocrun.cir
+Start Time: Wed Nov 11 23:36:13 2026
+Options:plotwinsize=0 threads=1 method=gear
+solver = Normal
+Maximum thread count: 1
+tnom = 27
+temp = 27
+method = Gear
+C1: Increased Cpar to 3.3e-10
+CinBulk: Increased Cpar to 3e-10
+CinCer: Increased Cpar to 1e-11
+Chf: Increased Cpar to 3e-13
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Warning: Simulation tolerance relaxed to achieve convergence from 1.7627888390108887e-02 to 1.7627888390109592e-02 seconds.
+Total elapsed time: 367.661 seconds.
+Total iterations: 4621090
+
+Files loaded:
+LTspice_RevF1\RevF1_G_runramp_nocrun.cir
+LTspice_RevF1\models\LTC3895.sub
+LTspice_RevF1\models\LT6105.lib
+LTspice_RevF1\models\LT1636.lib
+LTspice_RevF1\models\LT6654-1.25.sub
+LTspice_RevF1\models\RevD_diodes.lib
+

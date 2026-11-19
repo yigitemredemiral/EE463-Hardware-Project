@@ -1,0 +1,1 @@
+RevF1_FA_20V_90W RevF1_FA_48V_90W RevF1_FA_limit13_48V_27 RevF1_FA_limit13_48V_hot70_L20n RevF1_FA_start_20V_6A_90W RevF1_FA_start_36V_3A_90W RevF1_FA_start_48V_3A_90W

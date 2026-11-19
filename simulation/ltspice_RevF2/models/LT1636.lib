@@ -1,0 +1,74 @@
+* Unmodified subcircuit extracted from installed ADI LTspice library
+.subckt LT1636 1 2 3 4 5 6
+A1 2 1 0 0 0 0 0 0 OTA g=0 in=34.3f ink=40.1
+B1 0 N005 I=10u*dnlim(uplim(V(1),V(3)+44,.1), V(4)-.1, .1)+1n*V(1)-113.7p
+B2 N005 0 I=10u*dnlim(uplim(V(2),V(3)+44.01,.1), V(4)-.11, .1)+1n*V(2)
+C9 3 2 2p Rser=2k Rpar=24G noiseless
+C10 N005 0 200f Rpar=100K noiseless
+D4 3 N010 DBIA3
+D2 3 2 DBIA2
+D3 3 1 DBIA2
+D10 1 N010 DBIA1
+D11 2 N010 DBIA1
+A4 0 N005 0 0 0 0 N007 0 OTA g=1u linear en=51.98n enk=.86 Vhigh=1e308 Vlow=-1e308
+A5 N008 0 0 0 0 0 X5 0 OTA g=20u iout=840n Vhigh=1e308 Vlow=-1e308
+D12 1 3 DBIAOT
+D13 2 3 DBIAOT
+C5 N010 4 20p Rpar=15Meg noiseless
+D9 X5 0 DLIM
+C6 2 4 2p Rser=2k noiseless
+C7 3 1 2p Rser=2k Rpar=24G noiseless
+C8 1 4 2p Rser=2k noiseless
+R3 2 1 13Meg noiseless
+C13 3 4 100p
+G3 0 N004 3 4 50n
+S4 N004 0 6 4 SHUTI
+C20 N007 0 15p noiseless Rpar=1Meg
+G7 0 N008 N007 0 1m
+L1 N008 0 7.7m Cpar=8.8p Rser=1.21k Rpar=5.76k noiseless
+C21 N004 0 18p
+C17 4 6 100f Rpar=1Meg noiseless
+D14 4 1 DPROT
+D15 4 2 DPROT
+C2 3 5 1p Rpar=1g noiseless
+D1 VN 4 DLIMN1
+A2 0 X6 3 3 3 3 VP 3 OTA g=800n linear ref=-20m vlow=-1e308 vhigh=1e308
+C3 5 4 1p Rpar=1g noiseless
+D5 VN 4 DLIMN2
+C4 X5 N009 12p
+S1 X5 0 0 N004 SHUT
+S3 VN 4 0 N004 SHUT
+D6 3 VP DLIMP
+M1 5 VP N006 N006 PI temp=27
+M2 5 VN 4 4 NI temp=27
+C11 VP 5 .1f
+C12 5 VN .1f
+A3 0 X6 4 4 4 4 VN 4 OTA g=50n linear ref=20m vlow=-1e308 vhigh=1e308
+D8 3 N006 DILIMU
+C14 3 N006 1p Rpar=1g noiseless
+G1 0 N009 5 N012 10m
+R6 3 N012 8Meg noiseless
+R7 N012 4 8Meg noiseless
+C16 N009 0 100f Rpar=100 noiseless
+G2 0 X6 X5 0 1µ
+R4 X6 0 1Meg noiseless
+R8 X7 X6 2K noiseless
+S2 3 VP 0 N004 SHUT
+S5 3 4 N004 0 SP
+B4 X7 0 I=300p*ddt(V(X7))*(.5+.5*tanh((-360m-V(VP,3))/5m))
+.model DBIA1 D(Ron=1k Roff=100G  Vfwd=.1 ilimit=15n epsilon=.1 noiseless)
+.model DBIA2 D(Ron=1k Roff=100G Vfwd=0 ilimit=5n epsilon=10m noiseless)
+.model DBIA3 D(Ron=1k Roff=10G Vfwd=.7 epsilon=.1 noiseless)
+.model DBIAOT D(Ron=10k Vfwd=0 ilimit=2.2u epsilon=50m noiseless)
+.model DPROT D(Ron=1k Roff=24G Vfwd=1 epsilon=10m noiseless)
+.model SHUT SW(Ron=1 Roff=100G vt=-1 vh=-.9 noiseless)
+.model SHUTI SW(Ron=100 Roff=20Meg vt=1.2 vh=-10m noiseless)
+.model DILIMU D(Ron=.1 Roff=100k Vfwd=21m epsilon=2m noiseless)
+.model DLIMP D(Ron=100k Roff=100Meg Vfwd=1.3 Vrev=-.3  epsilon=10m revepsilon=10m noiseless)
+.model DLIMN1 D(Ron=100k Roff=400Meg Vfwd=1.5 Vrev=-310m epsilon=.1 revepsilon=10m  noiseless)
+.model DLIMN2 D(Ron=100Meg Roff=1G Vfwd=50m epsilon=100m ilimit=10n noiseless)
+.model SP SW(level=2 Ron=100 Roff=1G vt=.5 vh=-200m ilimit=45.47u noiseless)
+.model PI VDMOS(Vto=-300m Kp=32m pchan is=0 noiseless)
+.model NI VDMOS(Vto=300m kp=19m Rd=50 noiseless)
+.model DLIM D(Ron=10 Roff=70Meg Vfwd=300m Vrev=20m epsilon=10m revepsilon=10m noiseless)
+.ends LT1636

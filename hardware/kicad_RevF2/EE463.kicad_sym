@@ -1,0 +1,214 @@
+(kicad_symbol_lib (version 20250114) (generator "kicad_symbol_editor")
+(symbol "LTC3895FE" (pin_names (offset 0.8)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 23.59 0) (effects (font (size 1.27 1.27)))) (property "Value" "LTC3895FE" (at 0 -23.59 0) (effects (font (size 1.27 1.27)))) (symbol "LTC3895FE_0_1" (rectangle (start -17.78 21.59) (end 17.78 -21.59) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "LTC3895FE_1_1" (pin input line (at -20.32 19.05 0) (length 2.54) (name "OVLO" (effects (font (size 1 1)))) (number "1" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 16.51 0) (length 2.54) (name "VPRG" (effects (font (size 1 1)))) (number "2" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 13.97 0) (length 2.54) (name "SENSE+" (effects (font (size 1 1)))) (number "3" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 11.43 0) (length 2.54) (name "SENSE-" (effects (font (size 1 1)))) (number "4" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 8.89 0) (length 2.54) (name "SS" (effects (font (size 1 1)))) (number "5" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 6.350000000000001 0) (length 2.54) (name "VFB" (effects (font (size 1 1)))) (number "6" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 3.8100000000000005 0) (length 2.54) (name "ITH" (effects (font (size 1 1)))) (number "7" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 1.2699999999999996 0) (length 2.54) (name "MODE" (effects (font (size 1 1)))) (number "8" (effects (font (size 0.9 0.9)))))(pin power_in line (at -20.32 -1.2699999999999996 0) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "9" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 -3.8099999999999987 0) (length 2.54) (name "CPUMP_EN" (effects (font (size 1 1)))) (number "10" (effects (font (size 0.9 0.9)))))(pin output line (at -20.32 -6.349999999999998 0) (length 2.54) (name "CLKOUT" (effects (font (size 1 1)))) (number "11" (effects (font (size 0.9 0.9)))))(pin power_in line (at -20.32 -8.89 0) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "12" (effects (font (size 0.9 0.9)))))(pin input line (at -20.32 -11.43 0) (length 2.54) (name "PLLIN" (effects (font (size 1 1)))) (number "13" (effects (font (size 0.9 0.9)))))(pin open_collector line (at -20.32 -13.970000000000002 0) (length 2.54) (name "PGOOD" (effects (font (size 1 1)))) (number "14" (effects (font (size 0.9 0.9)))))(pin power_in line (at -20.32 -16.51 0) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "15" (effects (font (size 0.9 0.9)))))(pin no_connect line (at -20.32 -19.05 0) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "16" (effects (font (size 0.9 0.9)))))(pin input line (at 20.32 19.05 180) (length 2.54) (name "FREQ" (effects (font (size 1 1)))) (number "17" (effects (font (size 0.9 0.9)))))(pin input line (at 20.32 16.51 180) (length 2.54) (name "DRVSET" (effects (font (size 1 1)))) (number "18" (effects (font (size 0.9 0.9)))))(pin input line (at 20.32 13.97 180) (length 2.54) (name "DRVUV" (effects (font (size 1 1)))) (number "19" (effects (font (size 0.9 0.9)))))(pin output line (at 20.32 11.43 180) (length 2.54) (name "TG" (effects (font (size 1 1)))) (number "20" (effects (font (size 0.9 0.9)))))(pin passive line (at 20.32 8.89 180) (length 2.54) (name "SW" (effects (font (size 1 1)))) (number "21" (effects (font (size 0.9 0.9)))))(pin passive line (at 20.32 6.350000000000001 180) (length 2.54) (name "BOOST" (effects (font (size 1 1)))) (number "22" (effects (font (size 0.9 0.9)))))(pin output line (at 20.32 3.8100000000000005 180) (length 2.54) (name "BG" (effects (font (size 1 1)))) (number "24" (effects (font (size 0.9 0.9)))))(pin power_out line (at 20.32 1.2699999999999996 180) (length 2.54) (name "DRVCC" (effects (font (size 1 1)))) (number "26" (effects (font (size 0.9 0.9)))))(pin passive line (at 20.32 -1.2699999999999996 180) (length 2.54) (name "NDRV" (effects (font (size 1 1)))) (number "28" (effects (font (size 0.9 0.9)))))(pin power_in line (at 20.32 -3.8099999999999987 180) (length 2.54) (name "VIN" (effects (font (size 1 1)))) (number "30" (effects (font (size 0.9 0.9)))))(pin power_in line (at 20.32 -6.349999999999998 180) (length 2.54) (name "EXTVCC" (effects (font (size 1 1)))) (number "32" (effects (font (size 0.9 0.9)))))(pin input line (at 20.32 -8.89 180) (length 2.54) (name "RUN" (effects (font (size 1 1)))) (number "34" (effects (font (size 0.9 0.9)))))(pin input line (at 20.32 -11.43 180) (length 2.54) (name "PHASMD" (effects (font (size 1 1)))) (number "36" (effects (font (size 0.9 0.9)))))(pin input line (at 20.32 -13.970000000000002 180) (length 2.54) (name "ILIM" (effects (font (size 1 1)))) (number "37" (effects (font (size 0.9 0.9)))))(pin power_out line (at 20.32 -16.51 180) (length 2.54) (name "INTVCC" (effects (font (size 1 1)))) (number "38" (effects (font (size 0.9 0.9)))))(pin power_in line (at 20.32 -19.05 180) (length 2.54) (name "EP_GND" (effects (font (size 1 1)))) (number "39" (effects (font (size 0.9 0.9)))))))
+(symbol "LT6105IMS8" (pin_names (offset 0.8)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 8.35 0) (effects (font (size 1.27 1.27)))) (property "Value" "LT6105IMS8" (at 0 -8.35 0) (effects (font (size 1.27 1.27)))) (symbol "LT6105IMS8_0_1" (rectangle (start -10.16 6.35) (end 10.16 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "LT6105IMS8_1_1" (pin input line (at -12.7 3.81 0) (length 2.54) (name "IN-" (effects (font (size 1 1)))) (number "1" (effects (font (size 0.9 0.9)))))(pin power_in line (at -12.7 1.27 0) (length 2.54) (name "V+" (effects (font (size 1 1)))) (number "2" (effects (font (size 0.9 0.9)))))(pin no_connect line (at -12.7 -1.27 0) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "3" (effects (font (size 0.9 0.9)))))(pin power_in line (at -12.7 -3.81 0) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "4" (effects (font (size 0.9 0.9)))))(pin output line (at 12.7 3.81 180) (length 2.54) (name "OUT" (effects (font (size 1 1)))) (number "5" (effects (font (size 0.9 0.9)))))(pin no_connect line (at 12.7 1.27 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "6" (effects (font (size 0.9 0.9)))))(pin no_connect line (at 12.7 -1.27 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "7" (effects (font (size 0.9 0.9)))))(pin input line (at 12.7 -3.81 180) (length 2.54) (name "IN+" (effects (font (size 1 1)))) (number "8" (effects (font (size 0.9 0.9)))))))
+(symbol "LT1636IS8" (pin_names (offset 0.8)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 8.35 0) (effects (font (size 1.27 1.27)))) (property "Value" "LT1636IS8" (at 0 -8.35 0) (effects (font (size 1.27 1.27)))) (symbol "LT1636IS8_0_1" (rectangle (start -10.16 6.35) (end 10.16 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "LT1636IS8_1_1" (pin passive line (at -12.7 3.81 0) (length 2.54) (name "NULL" (effects (font (size 1 1)))) (number "1" (effects (font (size 0.9 0.9)))))(pin input line (at -12.7 1.27 0) (length 2.54) (name "IN-" (effects (font (size 1 1)))) (number "2" (effects (font (size 0.9 0.9)))))(pin input line (at -12.7 -1.27 0) (length 2.54) (name "IN+" (effects (font (size 1 1)))) (number "3" (effects (font (size 0.9 0.9)))))(pin power_in line (at -12.7 -3.81 0) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "4" (effects (font (size 0.9 0.9)))))(pin input line (at 12.7 3.81 180) (length 2.54) (name "SHDN" (effects (font (size 1 1)))) (number "5" (effects (font (size 0.9 0.9)))))(pin output line (at 12.7 1.27 180) (length 2.54) (name "OUT" (effects (font (size 1 1)))) (number "6" (effects (font (size 0.9 0.9)))))(pin power_in line (at 12.7 -1.27 180) (length 2.54) (name "V+" (effects (font (size 1 1)))) (number "7" (effects (font (size 0.9 0.9)))))(pin passive line (at 12.7 -3.81 180) (length 2.54) (name "NULL" (effects (font (size 1 1)))) (number "8" (effects (font (size 0.9 0.9)))))))
+(symbol "LT6654_1p25" (pin_names (offset 0.8)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 7.08 0) (effects (font (size 1.27 1.27)))) (property "Value" "LT6654_1p25" (at 0 -7.08 0) (effects (font (size 1.27 1.27)))) (symbol "LT6654_1p25_0_1" (rectangle (start -10.16 5.08) (end 10.16 -5.08) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "LT6654_1p25_1_1" (pin power_in line (at -12.7 2.54 0) (length 2.54) (name "GND_INT" (effects (font (size 1 1)))) (number "1" (effects (font (size 0.9 0.9)))))(pin power_in line (at -12.7 0.0 0) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 0.9 0.9)))))(pin no_connect line (at -12.7 -2.54 0) (length 2.54) (name "DNC" (effects (font (size 1 1)))) (number "3" (effects (font (size 0.9 0.9)))))(pin power_in line (at 12.7 2.54 180) (length 2.54) (name "VIN" (effects (font (size 1 1)))) (number "4" (effects (font (size 0.9 0.9)))))(pin no_connect line (at 12.7 0.0 180) (length 2.54) (name "DNC" (effects (font (size 1 1)))) (number "5" (effects (font (size 0.9 0.9)))))(pin power_out line (at 12.7 -2.54 180) (length 2.54) (name "VOUT" (effects (font (size 1 1)))) (number "6" (effects (font (size 0.9 0.9)))))))
+(symbol "RBQ20NS100A" (pin_names (offset 0.8)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 5.8100000000000005 0) (effects (font (size 1.27 1.27)))) (property "Value" "RBQ20NS100A" (at 0 -5.8100000000000005 0) (effects (font (size 1.27 1.27)))) (symbol "RBQ20NS100A_0_1" (rectangle (start -7.62 3.81) (end 7.62 -3.81) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "RBQ20NS100A_1_1" (pin passive line (at -10.16 1.27 0) (length 2.54) (name "A1" (effects (font (size 1 1)))) (number "1" (effects (font (size 0.9 0.9)))))(pin passive line (at -10.16 -1.27 0) (length 2.54) (name "A2" (effects (font (size 1 1)))) (number "3" (effects (font (size 0.9 0.9)))))(pin passive line (at 10.16 0.0 180) (length 2.54) (name "K_TAB" (effects (font (size 1 1)))) (number "2" (effects (font (size 0.9 0.9)))))))
+(symbol "BAT54_SOT23" (pin_names (offset 0.8)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 5.8100000000000005 0) (effects (font (size 1.27 1.27)))) (property "Value" "BAT54_SOT23" (at 0 -5.8100000000000005 0) (effects (font (size 1.27 1.27)))) (symbol "BAT54_SOT23_0_1" (rectangle (start -6.35 3.81) (end 6.35 -3.81) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "BAT54_SOT23_1_1" (pin passive line (at -8.89 1.27 0) (length 2.54) (name "A" (effects (font (size 1 1)))) (number "1" (effects (font (size 0.9 0.9)))))(pin no_connect line (at -8.89 -1.27 0) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "2" (effects (font (size 0.9 0.9)))))(pin passive line (at 8.89 0.0 180) (length 2.54) (name "K" (effects (font (size 1 1)))) (number "3" (effects (font (size 0.9 0.9)))))))
+(symbol "LM74700-Q1"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -9.525 -8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM74700-Q1"
+			(at 7.62 -8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at -9.525 -8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/LM74700-Q1"
+			(at -9.525 -8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low Iq reverse battery protection ideal diode controller, SOT-23-6"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "ideal-diode or-ing"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LM74700-Q1_0_1"
+			(rectangle
+				(start -10.16 7.62)
+				(end 10.16 -7.62)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM74700-Q1_1_1"
+			(pin passive line
+				(at -12.7 -2.54 0)
+				(length 2.54)
+				(name "VCAP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -5.08 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 7.62 10.16 270)
+				(length 2.54)
+				(name "CATHODE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 0 10.16 270)
+				(length 2.54)
+				(name "GATE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -7.62 10.16 270)
+				(length 2.54)
+				(name "ANODE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)

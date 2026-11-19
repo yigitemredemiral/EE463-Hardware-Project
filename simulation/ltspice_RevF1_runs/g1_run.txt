@@ -1,0 +1,8 @@
+RevF1_G_prime27_20V                      ok           376s
+RevF1_G_prime27_48V                      ok           417s
+RevF1_G_prime70_48V                      ok           313s
+RevF1_G500_prime27_20V                   ok           419s
+RevF1_G_hotplug48_cable1u                ok           314s
+RevF1_G_hotplug48_cable0p5u              ok           403s
+RevF1_G_runramp_crun                     ok           367s
+RevF1_G_runramp_nocrun                   ok           369s

@@ -1,0 +1,1 @@
+RevF1_G_prime27_20V RevF1_G_prime27_48V RevF1_G_prime70_48V RevF1_G500_prime27_20V RevF1_G_hotplug48_cable1u RevF1_G_hotplug48_cable0p5u RevF1_G_runramp_crun RevF1_G_runramp_nocrun

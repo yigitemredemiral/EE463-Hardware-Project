@@ -1,0 +1,18 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\EE463_Buck_RevF2.net
+Start Time: Thu Nov 19 17:20:53 2026
+Options:plotwinsize=0 threads=1
+solver = Normal
+Maximum thread count: 1
+tnom = 27
+temp = 27
+method = trap
+CINcer: Increased Cpar to 1e-11
+CINbulk: Increased Cpar to 3e-10
+CHF: Increased Cpar to 3e-13
+COUT: Increased Cpar to 3.3e-10
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Warning: Simulation tolerance relaxed to achieve convergence from 6.4600984539767907e-05 to 6.4600984539768910e-05 seconds.
