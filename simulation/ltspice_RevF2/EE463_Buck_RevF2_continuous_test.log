@@ -1,0 +1,63 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\EE463_Buck_RevF2_continuous_test.net
+Start Time: Thu Nov 19 20:25:21 2026
+Options:plotwinsize=0 threads=1
+solver = Normal
+Maximum thread count: 1
+tnom = 27
+temp = 27
+method = trap
+CINcer: Increased Cpar to 1e-11
+CINbulk: Increased Cpar to 3e-10
+CHF: Increased Cpar to 3e-13
+COUT: Increased Cpar to 3.3e-10
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Warning: Simulation tolerance relaxed to achieve convergence from 6.4600984539767907e-05 to 6.4600984539768910e-05 seconds.
+Total elapsed time: 2433.865 seconds.
+
+Files loaded:
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\EE463_Buck_RevF2_continuous_test.net
+C:\Users\yemre\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\yemre\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LT6105.lib
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LT1636.lib
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LT6654-1.25.sub
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\RevD_diodes.lib
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LTC3895.sub
+
+vout_60w_24v: AVG(V(out) )=11.9988301201 FROM 0.01 TO 0.012
+vpp_60w_24v: PP(V(out) )=0.035774230957 FROM 0.0115 TO 0.012
+pin_60w_24v: AVG(-V(source)*I(V1) )=61.7916670461 FROM 0.01 TO 0.012
+pout_60w_24v: AVG(V(out)*I(Rload) )=59.988324056 FROM 0.01 TO 0.012
+eff_60w_24v: pout_60W_24V/pin_60W_24V*100=97.0815757589
+vout_90w_24v: AVG(V(out) )=11.9979057539 FROM 0.02 TO 0.022
+vpp_90w_24v: PP(V(out) )=0.0369701385498 FROM 0.0215 TO 0.022
+pin_90w_24v: AVG(-V(source)*I(V1) )=93.5677222927 FROM 0.02 TO 0.022
+pout_90w_24v: AVG(V(out)*I(Rload) )=89.9686190819 FROM 0.02 TO 0.022
+eff_90w_24v: pout_90W_24V/pin_90W_24V*100=96.1534777992
+vout_60w_24vb: AVG(V(out) )=11.9980361198 FROM 0.028 TO 0.03
+vpp_60w_24vb: PP(V(out) )=0.040114402771 FROM 0.0295 TO 0.03
+pin_60w_24vb: AVG(-V(source)*I(V1) )=61.7068510404 FROM 0.028 TO 0.03
+pout_60w_24vb: AVG(V(out)*I(Rload) )=59.9803857521 FROM 0.028 TO 0.03
+eff_60w_24vb: pout_60W_24Vb/pin_60W_24Vb*100=97.2021497465
+vout_60w_48v: AVG(V(out) )=11.9981601735 FROM 0.038 TO 0.04
+vpp_60w_48v: PP(V(out) )=0.0323638916016 FROM 0.0395 TO 0.04
+pin_60w_48v: AVG(-V(source)*I(V1) )=61.7087502683 FROM 0.038 TO 0.04
+pout_60w_48v: AVG(V(out)*I(Rload) )=59.9816326902 FROM 0.038 TO 0.04
+eff_60w_48v: pout_60W_48V/pin_60W_48V*100=97.2011788107
+vout_60w_20v: AVG(V(out) )=11.9980724765 FROM 0.048 TO 0.05
+vpp_60w_20v: PP(V(out) )=0.0440692901611 FROM 0.0495 TO 0.05
+pin_60w_20v: AVG(-V(source)*I(V1) )=61.9328136628 FROM 0.048 TO 0.05
+pout_60w_20v: AVG(V(out)*I(Rload) )=59.9807674333 FROM 0.048 TO 0.05
+eff_60w_20v: pout_60W_20V/pin_60W_20V*100=96.848122806
+vout_60w_24vc: AVG(V(out) )=11.9978346706 FROM 0.058 TO 0.06
+vpp_60w_24vc: PP(V(out) )=0.0374317169189 FROM 0.0595 TO 0.06
+pin_60w_24vc: AVG(-V(source)*I(V1) )=61.7628065478 FROM 0.058 TO 0.06
+pout_60w_24vc: AVG(V(out)*I(Rload) )=59.9783764457 FROM 0.058 TO 0.06
+eff_60w_24vc: pout_60W_24Vc/pin_60W_24Vc*100=97.1108338467
+vout_min: MIN(V(out) )=11.8335113525 FROM 0.009 TO 0.06
+vout_max: MAX(V(out) )=12.1631364822 FROM 0.009 TO 0.06
+il_peak: MAX(I(L1) )=8.77240848541 FROM 0.009 TO 0.06
