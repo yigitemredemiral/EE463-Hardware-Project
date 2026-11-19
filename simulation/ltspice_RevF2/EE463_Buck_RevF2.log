@@ -16,3 +16,15 @@ Starting Gmin stepping
 Gmin stepping succeeded in finding the operating point.
 
 Warning: Simulation tolerance relaxed to achieve convergence from 6.4600984539767907e-05 to 6.4600984539768910e-05 seconds.
+Total elapsed time: 563.371 seconds.
+
+Files loaded:
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\EE463_Buck_RevF2.net
+C:\Users\yemre\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\yemre\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LT6105.lib
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LT1636.lib
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LT6654-1.25.sub
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\RevD_diodes.lib
+C:\Users\yemre\Desktop\7th Semester\EE463\Term Project\EE463-Hardware-Project\simulation\ltspice_RevF2\models\LTC3895.sub
+

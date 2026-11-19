@@ -1,4 +1,4 @@
-Group X							
+CMPS (Claude-Made Power Supply)							
 Part Number	Short Description	Digikey / Mouser Link	Turkish Supplier Link (if available)	Quantity	Unit Price (USD)	Total Price (USD)	Group Total Budget (USD)
 LTC3895IFE#PBF	150 V synchronous buck controller, TSSOP-38 (FE) + EP [U1]	https://www.digikey.com/en/products/detail/analog-devices-inc/LTC3895IFE-PBF/6025900		1	17.69	=E3*F3	=SUM(G3:G50)
 LT6105IMS8#PBF	Current-sense amplifier, -0.3..44 V input, MSOP-8 [U2]	https://www.digikey.com/en/products/detail/analog-devices-inc/LT6105IMS8-PBF/1785494		1	4.56	=E4*F4	

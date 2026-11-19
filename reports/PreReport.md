@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | Course | EE463 Static Power Conversion I, METU, Fall 2026 |
-| Group | *Group X* (fill in names and student IDs) |
+| Group | CMPS (Claude-Made Power Supply): Yiğit Emre Demiral, Vedat Tunahan Ceylan, Yasin Baytemir (add student IDs) |
 | Design revision | RevF2 (schematic, PCB and BOM in this repository) |
 | Date | 19 November 2026 (pre-report due 22 November 2026) |
 
@@ -275,6 +275,12 @@ inductance, gate-loop inductance, trace resistance, capacitor ESR/ESL). The draw
 | 20 V / 90 W | 11.998 | 22.2 | 96.95 | 0.349 / 0.164 / 0.095 | 8.29 | 21.2 / 25.9 |
 | 48 V / 90 W | 11.998 | 32.4 | 96.44 | 0.899 / 0.239 / 0.041 | 8.98 | 49.4 / 48.5 |
 | 48 V / 90 W, 70 °C, 4× parasitic inductance | 12.025 | 33.6 | 95.98 | 0.905 / 0.275 / 0.041 | 9.01 | 49.9 / 48.9 |
+
+Cross-check with the drawn RevF2 LTspice schematic (24 V / 60 W, 14 ms cold start, generic MOSFET models):
+V_out = 11.998 V, switching ripple about 22 mVpp per cycle, η = 97.15 %, I_L between 4.1 and 6.0 A. The switch node
+rings to about 34 V for a few tens of ns at turn-on (hot-loop and gate-loop inductance in the model).
+
+![Steady-state waveforms](figures/ss_waveforms_24V_60W.png)
 
 Comparison with hand calculation: ripple 21–37 mVpp *(sim)* vs 19–29 mVpp (hand; the simulation includes ESL),
 peak current 5.83–6.51 A vs 5.77–6.45 A, efficiency 0.5–0.8 point lower in simulation (switching transitions
