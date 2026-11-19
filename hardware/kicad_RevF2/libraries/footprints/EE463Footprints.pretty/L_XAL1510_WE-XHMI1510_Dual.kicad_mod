@@ -188,7 +188,7 @@
 		(uuid "0b9608ae-d1af-4d0a-a094-30e0b6270a25")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/3dmodels/Inductor_SMD.3dshapes/L_Coilcraft_XAL1510-333.step"
+	(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Coilcraft_XAL1510-333.step"
 		(offset
 			(xyz 0 0 0)
 		)

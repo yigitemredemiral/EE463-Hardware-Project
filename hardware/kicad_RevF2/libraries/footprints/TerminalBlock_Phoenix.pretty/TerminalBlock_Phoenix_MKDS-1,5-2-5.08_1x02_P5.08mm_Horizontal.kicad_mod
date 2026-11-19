@@ -374,7 +374,7 @@
 		(uuid "9d02a264-b53c-461e-840f-4e5ce0b000bc")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/3dmodels/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal.step"
+	(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal.step"
 		(offset
 			(xyz 0 0 0)
 		)

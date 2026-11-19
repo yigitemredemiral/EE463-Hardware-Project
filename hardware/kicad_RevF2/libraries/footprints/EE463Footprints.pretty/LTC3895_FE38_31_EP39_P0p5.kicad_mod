@@ -933,7 +933,7 @@
 		(uuid "e590d36b-bf8d-43c0-9898-f5418f4c89d9")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/Linear_HTSSOP-31-38-1EP_4.4x9.7mm_P0.5mm_EP2.74x4.75mm.step"
+	(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/TSSOP-38_4.4x9.7mm_P0.5mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

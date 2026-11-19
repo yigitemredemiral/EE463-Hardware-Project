@@ -359,7 +359,7 @@
 		(uuid "f7039913-d073-4eba-a07e-efb673b95988")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/Infineon_PG-TDSON-8_6.15x5.15mm.step"
+	(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/TDSON-8-1.step"
 		(offset
 			(xyz 0 0 0)
 		)

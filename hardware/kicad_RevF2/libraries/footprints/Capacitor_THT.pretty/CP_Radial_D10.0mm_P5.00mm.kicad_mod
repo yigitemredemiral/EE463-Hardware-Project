@@ -2102,7 +2102,7 @@
 		(uuid "087171d2-82d3-4049-b80f-c9ebbda181a6")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/3dmodels/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step"
+	(model "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

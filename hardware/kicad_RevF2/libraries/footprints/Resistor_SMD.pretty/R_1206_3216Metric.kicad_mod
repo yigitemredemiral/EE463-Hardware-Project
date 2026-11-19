@@ -168,7 +168,7 @@
 		(uuid "ff56205b-69e9-42aa-bb02-ef0bee8eb195")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/3dmodels/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+	(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -457,7 +457,7 @@
 		(uuid "a024dc17-e57f-4fbd-8c78-ccd05ac0a134")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/3dmodels/Capacitor_SMD.3dshapes/CP_Elec_10x12.6.step"
+	(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/CP_Elec_10x12.6.step"
 		(offset
 			(xyz 0 0 0)
 		)
