@@ -228,7 +228,7 @@ Gain margin is above 19 dB in all cases. Details and plots are in [`ControlLoop.
 
 The full bill of materials with DigiKey links, prices and datasheets is in [`bom/`](../bom/).
 
-- **Budget:** 82.37 USD for one board including the compensation-B spares (course limit 100 USD per group).
+- **Budget:** 80.91 USD for one board including the compensation-B spares; 27 of 48 BOM lines are bought in Turkey (Ozdisan) (course limit 100 USD per group).
 - **Package rule:** every resistor and capacitor is 0805 or larger, except six 0603 resistors (RCSO1, RERR1, RFBT1,
   ROVB1, RRUNT1, RSETT1) that sit in the densest routing next to the controller and the op amps; the other 24 former
   0603 parts were enlarged to 0805 by moving them 0–0.38 mm with a DRC-checked search (see `bom/README.md`). No 0402.

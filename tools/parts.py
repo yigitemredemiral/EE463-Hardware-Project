@@ -135,3 +135,99 @@ SPARES = [
     p('68n / C0G', 'C3216C0G1H683J160AA', 'TDK', 'Compensation B: CITH 68 nF 50 V C0G 1206 (spare; fits across the 0805 pads)', 'Capacitor_SMD:C_1206_3216Metric', 0.62, DS['TDK_GEN'], dk=D + 'tdk-corporation/C3216C0G1H683J160AA/2733128'),
     mur('1n / 50V C0G', 'GRM2165C1H102JA01D', 'Compensation B: CITHP 1 nF 50 V C0G 0805 (spare)', 0.17, dk=D + 'murata-electronics/GRM2165C1H102JA01D/586809'),
 ]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Turkish stock (Ozdisan, checked 2026-11-19). Parts not stocked in Turkey are replaced by an equivalent that is
+# (same value, same package, same or tighter tolerance, same dielectric class, same or higher voltage/power).
+# Prices: Ozdisan unit price in USD (VAT excluded); the bought quantity is rounded up to the Ozdisan MOQ.
+# Parts with no Turkish stock (ADI ICs, LM74700, MOSFETs, XAL1510, OS-CON, Rubycon, Phoenix, shunt, 100 V 0805 X7R,
+# C0G 1 nF/100 V, 27 nF C0G, 4.7 Ohm 1%, 2.2 Ohm pulse, 0.1% 140k/11.8k) stay on DigiKey.
+OZ = 'https://www.ozdisan.com/p/'
+OZR = OZ + 'smt-smd-ve-cip-direncler-194/'
+OZC = OZ + 'smt-smd-ve-mlcc-kapasitorler-184/'
+DS_TC = 'https://www.mouser.lt/pdfDocs/highprecisionthinfilmtcseries_ro-1.pdf'
+DS_HOT = 'https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1812051032_Guangdong-Hottech-BAT54S_C181201.pdf'
+DS_YX7R = 'https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V'
+DS_YNP0 = 'https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_NP0_16V-TO-50V'
+
+
+def roy(v, mpn, oid, price, moq, tol='1%', kind='0.125W 0805 thick film', ds=None):
+    url = f'{OZR}royalohm-{mpn.lower()}-{oid}'
+    return dict(mpn=mpn, mfr='Royal Ohm', desc=f'Resistor {v} {tol} {kind}', price=price, moq=moq, tr=url,
+                datasheet=ds or url)
+
+
+def cap(mpn, mfr, desc, price, moq, slug, ds=None):
+    url = OZC + slug
+    return dict(mpn=mpn, mfr=mfr, desc=desc, price=price, moq=moq, tr=url, datasheet=ds or url, dk=DK + mpn)
+
+
+# old MPN -> Turkish-stock replacement. When the new maker is not on DigiKey (Royal Ohm, Hottech) the DigiKey column
+# keeps the link of the original, equivalent part.
+REPLACE = {
+    'RC0805FR-078K2L': roy('8.2k', '0805S8F8201T5E', 31100, 0.00182, 100),
+    'RC0805FR-0724K3L': roy('24.3k', '0805S8F2432T5E', 505549, 0.00182, 100),
+    'RC0805FR-07150RL': roy('150', '0805S8F1500T5E', 335038, 0.00182, 100),
+    'RC0805FR-0710ML': roy('10M', '0805S8F1005T5E', 35616, 0.00337, 50),
+    'RC0805FR-07825KL': roy('825k', '0805S8F8253T5E', 505666, 0.00182, 100),
+    'RC0805FR-07511KL': roy('511k', '0805S8F5113T5E', 505648, 0.00182, 100),
+    'RC0805FR-0710KL': roy('10k', '0805S8F1002T5E', 30240, 0.00182, 100),
+    'RC0805FR-073K9L': roy('3.9k', '0805S8F3901T5E', 35627, 0.00182, 100),
+    'ERJ-6RQF2R2V': roy('2.2 Ohm', 'CQ05S8F220KT5E', 587991, 0.00505, 20, kind='0.125W 0805 AEC-Q200 (gate)'),
+    'RT0805BRD07100RL': roy('100 Ohm', 'TC0525B1000T5G', 700116, 0.03564, 5, '0.1% 25ppm', '0805 thin film', DS_TC),
+    'RT0805BRD0710KL': roy('10k', 'TC0525B1002T5G', 700129, 0.03564, 5, '0.1% 25ppm', '0805 thin film', DS_TC),
+    'RC0603FR-0720KL': roy('20k', '0603SAF2002T5E', 353309, 0.00111, 100, kind='0.1W 0603 thick film'),
+    'RC0603FR-07130KL': roy('130k', '0603SAF1303T5E', 359810, 0.00111, 100, kind='0.1W 0603 thick film'),
+    'CL32B225KCJSNNE': cap('GRM32ER72A225KA35L', 'Murata', 'Input capacitor 2.2 uF 100 V X7R, 1210', 0.32651, 1,
+                           'murata-grm32er72a225ka35l-1589679', DS['MURATA'].rstrip('#')),
+    'C2012X7R1C105K085AC': cap('CC0805KKX7R7BB105', 'Yageo', 'Reference / aux bypass 1 uF 16 V X7R, 0805', 0.05307, 2,
+                               'yageo-cc0805kkx7r7bb105-504015', DS_YX7R),
+    'C2012X7R1E105K125AB': cap('CC0805KKX7R8BB105', 'Yageo', 'Bootstrap capacitor 1 uF 25 V X7R, 0805', 0.06369, 5,
+                               'yageo-cc0805kkx7r8bb105-576600', DS_YX7R),
+    'GRM2165C1H471JA01D': cap('CL21C471JBANNNC', 'Samsung Electro-Mechanics', 'Compensation CITHP 470 pF 50 V C0G 5%, 0805',
+                              0.020, 10, 'samsung-cl21c471jbannnc-5654'),
+    'C2012C0G1H103J060AA': cap('CL21C103JBFNNNE', 'Samsung Electro-Mechanics', 'CS filter / integrator 10 nF 50 V C0G 5%, 0805',
+                               0.10478, 1, 'samsung-cl21c103jbfnnne-353899'),
+    'GRM2165C1H102JA01D': cap('CC0805JRNPO9BN102', 'Yageo', 'Capacitor 1 nF 50 V C0G 5%, 0805 (RUN filter, sense filter, comp. B CITHP)',
+                              0.02694, 5, 'yageo-cc0805jrnpo9bn102-749103', DS_YNP0),
+    'CC1206KKX7R0BB105': cap('CL31B105KCHNNNE', 'Samsung Electro-Mechanics', 'LM74700 CATHODE / Q3 drain capacitor 1 uF 100 V X7R, 1206',
+                             0.06529, 2, 'samsung-cl31b105kchnnne-382908'),
+    'BAT54LT1G': dict(mpn='BAT54S-HT', mfr='Hottech', value='BAT54S', price=0.01054, moq=10, datasheet=DS_HOT,
+                      desc='Schottky 30 V 200 mA dual series, SOT-23; only diode 1 used (1=A, 3=K, same as BAT54), pin 2 is a no-connect pad',
+                      tr=OZ + 'schottky-diyotlar-385/hottech-bat54s-ht-417220'),
+}
+# kept parts that are also in stock in Turkey
+TR_ONLY = {
+    'BAT46WJ,115': dict(tr=OZ + 'schottky-diyotlar-385/nexperia-bat46wj-115-609944', price=0.12133, moq=1,
+                        note='Ozdisan: 6562 in stock (DigiKey backordered)'),
+    'CL21A475KAQNNNE': dict(tr=OZC + 'samsung-cl21a475kaqnnne-441542', price=0.028, moq=5),
+    'RC0805FR-07100KL': dict(tr=OZR + 'yageo-rc0805fr-07100kl-460162', price=0.00429, moq=50),
+    'RT0805BRD0712KL': dict(tr=OZR + 'yageo-rt0805brd0712kl-814018', price=0.04871, moq=5),
+    'RT0603BRD072KL': dict(tr=OZR + 'yageo-rt0603brd072kl-625691', price=0.04921, moq=5),
+    'RC0603FR-0717K4L': dict(tr=OZR + 'yageo-rc0603fr-0717k4l-618013', price=0.00252, moq=50),
+}
+
+
+def turkey(p):
+    """Return the part with the Turkish-stock replacement or link applied (idempotent)."""
+    old = p['mpn']
+    if old in REPLACE:
+        r = REPLACE[old]
+        q = dict(p, **r)
+        q['note'] = f'Turkish stock (Ozdisan); replaces {old}'
+        if 'dk' not in r:
+            q['note'] += ' (DigiKey link = that original part)'
+        return q
+    if old in TR_ONLY:
+        t = TR_ONLY[old]
+        q = dict(p, **{k: v for k, v in t.items() if k != 'note'})
+        q['note'] = t.get('note', 'in stock at Ozdisan')
+        return q
+    return p
+
+
+for _r in list(PARTS):
+    PARTS[_r] = turkey(PARTS[_r])
+PARTS['J2'] = dict(PARTS['J1'], value='12 V OUT')
+SPARES = [turkey(s) for s in SPARES]

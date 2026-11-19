@@ -1327,7 +1327,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1361,7 +1361,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1385,7 +1385,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -2279,7 +2279,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f2432t5e-505549"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2313,7 +2313,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0724K3L"
+		(property "MPN" "0805S8F2432T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -2337,7 +2337,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5178,7 +5178,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/samsung-cl21c471jbannnc-5654"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5189,7 +5189,7 @@
 				)
 			)
 		)
-		(property "Description" "Compensation CITHP 470 pF 50 V C0G, 0805"
+		(property "Description" "Compensation CITHP 470 pF 50 V C0G 5%, 0805"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5212,7 +5212,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM2165C1H471JA01D"
+		(property "MPN" "CL21C471JBANNNC"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5236,7 +5236,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5752,7 +5752,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5786,7 +5786,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5810,7 +5810,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5936,7 +5936,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f1005t5e-35616"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5970,7 +5970,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710ML"
+		(property "MPN" "0805S8F1005T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5994,7 +5994,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -6402,7 +6402,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f1002t5e-30240"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6436,7 +6436,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710KL"
+		(property "MPN" "0805S8F1002T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -6460,7 +6460,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -8455,7 +8455,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8489,7 +8489,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8513,7 +8513,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9434,7 +9434,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9468,7 +9468,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012X7R1E105K125AB"
+		(property "MPN" "CC0805KKX7R8BB105"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9492,7 +9492,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9618,7 +9618,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9652,7 +9652,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9676,7 +9676,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9802,7 +9802,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9836,7 +9836,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9860,7 +9860,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9987,7 +9987,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f8201t5e-31100"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10021,7 +10021,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-078K2L"
+		(property "MPN" "0805S8F8201T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -10045,7 +10045,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -10357,7 +10357,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_NP0_16V-TO-50V"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10368,7 +10368,7 @@
 				)
 			)
 		)
-		(property "Description" "Capacitor 1 nF 50 V C0G, 0805 (RUN filter, sense filter)"
+		(property "Description" "Capacitor 1 nF 50 V C0G 5%, 0805 (RUN filter, sense filter, comp. B CITHP)"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10391,7 +10391,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM2165C1H102JA01D"
+		(property "MPN" "CC0805JRNPO9BN102"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -10415,7 +10415,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -10715,7 +10715,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0603saf2002t5e-353309"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10749,7 +10749,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0720KL"
+		(property "MPN" "0603SAF2002T5E"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10773,7 +10773,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -11557,7 +11557,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f8253t5e-505666"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11591,7 +11591,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07825KL"
+		(property "MPN" "0805S8F8253T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -11615,7 +11615,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12176,7 +12176,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12210,7 +12210,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012X7R1C105K085AC"
+		(property "MPN" "CC0805KKX7R7BB105"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12234,7 +12234,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12360,7 +12360,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12394,7 +12394,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12418,7 +12418,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12544,7 +12544,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/samsung-cl21c103jbfnnne-353899"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12555,7 +12555,7 @@
 				)
 			)
 		)
-		(property "Description" "CS filter / integrator 10 nF 50 V C0G, 0805"
+		(property "Description" "CS filter / integrator 10 nF 50 V C0G 5%, 0805"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12578,7 +12578,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012C0G1H103J060AA"
+		(property "MPN" "CL21C103JBFNNNE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12602,7 +12602,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12728,7 +12728,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12762,7 +12762,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12786,7 +12786,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12913,7 +12913,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f5113t5e-505648"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12947,7 +12947,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07511KL"
+		(property "MPN" "0805S8F5113T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12971,7 +12971,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13379,7 +13379,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13413,7 +13413,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13437,7 +13437,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13563,7 +13563,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0603saf1303t5e-359810"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13597,7 +13597,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07130KL"
+		(property "MPN" "0603SAF1303T5E"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13621,7 +13621,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13931,7 +13931,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
+		(property "Datasheet" "https://www.mouser.lt/pdfDocs/highprecisionthinfilmtcseries_ro-1.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13942,7 +13942,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor 100 0.1% 25ppm 0805 thin film"
+		(property "Description" "Resistor 100 Ohm 0.1% 25ppm 0805 thin film"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13965,7 +13965,7 @@
 				)
 			)
 		)
-		(property "MPN" "RT0805BRD07100RL"
+		(property "MPN" "TC0525B1000T5G"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13989,7 +13989,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -16627,7 +16627,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/samsung-cl31b105kchnnne-382908"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16661,7 +16661,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC1206KKX7R0BB105"
+		(property "MPN" "CL31B105KCHNNNE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -16673,7 +16673,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -17287,7 +17287,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17321,7 +17321,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012X7R1C105K085AC"
+		(property "MPN" "CC0805KKX7R7BB105"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17345,7 +17345,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -17861,7 +17861,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
+		(property "Datasheet" "https://www.mouser.lt/pdfDocs/highprecisionthinfilmtcseries_ro-1.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17872,7 +17872,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor 100 0.1% 25ppm 0805 thin film"
+		(property "Description" "Resistor 100 Ohm 0.1% 25ppm 0805 thin film"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17895,7 +17895,7 @@
 				)
 			)
 		)
-		(property "MPN" "RT0805BRD07100RL"
+		(property "MPN" "TC0525B1000T5G"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -17919,7 +17919,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18045,7 +18045,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-0805s8f1500t5e-335038"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18079,7 +18079,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07150RL"
+		(property "MPN" "0805S8F1500T5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18103,7 +18103,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18413,7 +18413,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -18447,7 +18447,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18471,7 +18471,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18782,7 +18782,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
+		(property "Datasheet" "https://www.mouser.lt/pdfDocs/highprecisionthinfilmtcseries_ro-1.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18816,7 +18816,7 @@
 				)
 			)
 		)
-		(property "MPN" "RT0805BRD0710KL"
+		(property "MPN" "TC0525B1002T5G"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -18840,7 +18840,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -19078,7 +19078,7 @@
 				)
 			)
 		)
-		(property "Value" "BAT54"
+		(property "Value" "BAT54S"
 			(at 0 2.4 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19090,7 +19090,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BAT54LT1-D.PDF"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1812051032_Guangdong-Hottech-BAT54S_C181201.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19101,7 +19101,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky 30 V 200 mA, SOT-23 (1=A, 3=K)"
+		(property "Description" "Schottky 30 V 200 mA dual series, SOT-23; only diode 1 used (1=A, 3=K, same as BAT54), pin 2 is a no-connect pad"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19124,7 +19124,7 @@
 				)
 			)
 		)
-		(property "MPN" "BAT54LT1G"
+		(property "MPN" "BAT54S-HT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19148,7 +19148,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "onsemi"
+		(property "Manufacturer" "Hottech"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -23664,7 +23664,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/samsung-cl21c103jbfnnne-353899"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23675,7 +23675,7 @@
 				)
 			)
 		)
-		(property "Description" "CS filter / integrator 10 nF 50 V C0G, 0805"
+		(property "Description" "CS filter / integrator 10 nF 50 V C0G 5%, 0805"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23698,7 +23698,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012C0G1H103J060AA"
+		(property "MPN" "CL21C103JBFNNNE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -23722,7 +23722,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -23836,7 +23836,7 @@
 				)
 			)
 		)
-		(property "Value" "BAT54"
+		(property "Value" "BAT54S"
 			(at 0 2.4 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23848,7 +23848,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BAT54LT1-D.PDF"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1812051032_Guangdong-Hottech-BAT54S_C181201.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23859,7 +23859,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky 30 V 200 mA, SOT-23 (1=A, 3=K)"
+		(property "Description" "Schottky 30 V 200 mA dual series, SOT-23; only diode 1 used (1=A, 3=K, same as BAT54), pin 2 is a no-connect pad"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23882,7 +23882,7 @@
 				)
 			)
 		)
-		(property "MPN" "BAT54LT1G"
+		(property "MPN" "BAT54S-HT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23906,7 +23906,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "onsemi"
+		(property "Manufacturer" "Hottech"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24438,7 +24438,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf"
+		(property "Datasheet" "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/royalohm-cq05s8f220kt5e-587991"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -24449,7 +24449,7 @@
 				)
 			)
 		)
-		(property "Description" "Gate resistor 2.2 Ohm 1% 0805"
+		(property "Description" "Resistor 2.2 Ohm 1% 0.125W 0805 AEC-Q200 (gate)"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -24472,7 +24472,7 @@
 				)
 			)
 		)
-		(property "MPN" "ERJ-6RQF2R2V"
+		(property "MPN" "CQ05S8F220KT5E"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24496,7 +24496,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Panasonic"
+		(property "Manufacturer" "Royal Ohm"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24622,7 +24622,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_NP0_16V-TO-50V"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -24633,7 +24633,7 @@
 				)
 			)
 		)
-		(property "Description" "Capacitor 1 nF 50 V C0G, 0805 (RUN filter, sense filter)"
+		(property "Description" "Capacitor 1 nF 50 V C0G 5%, 0805 (RUN filter, sense filter, comp. B CITHP)"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -24656,7 +24656,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM2165C1H102JA01D"
+		(property "MPN" "CC0805JRNPO9BN102"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24680,7 +24680,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -24806,7 +24806,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL32B225KCJSNNE_Spec.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -24840,7 +24840,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL32B225KCJSNNE"
+		(property "MPN" "GRM32ER72A225KA35L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24864,7 +24864,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" "Murata"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
