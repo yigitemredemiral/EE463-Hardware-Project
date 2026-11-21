@@ -5,7 +5,7 @@
 \geometry{a4paper, margin=1in, top=1.2in, bottom=1.2in}
 \usepackage{graphicx, amsmath, amssymb, booktabs, float, adjustbox, caption, enumitem, titlesec, lmodern}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{siunitx}
+\usepackage{siunitx, pdflscape}
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black]{hyperref}
 \captionsetup{font=small, labelfont=bf}
 \renewcommand{\bibname}{References}
@@ -20,7 +20,7 @@
 \newcommand{\simfigure}[4][\textwidth]{\begin{figure}[H]\centering
   \includegraphics[width=#1, height=0.32\textheight, keepaspectratio]{#2}\caption{#3}\label{#4}\end{figure}}
 \newcommand{\tallfigure}[4][\textwidth]{\begin{figure}[H]\centering
-  \includegraphics[width=#1, height=0.55\textheight, keepaspectratio]{#2}\caption{#3}\label{#4}\end{figure}}
+  \includegraphics[width=#1, height=0.38\textheight, keepaspectratio]{#2}\caption{#3}\label{#4}\end{figure}}
 % one row of the component temperature table: ref, name, limit
 \newcommand{\throw}[3]{#2 & #3 & \val{th.s24.#1.t300} & \val{th.h48.#1.t300} & \val{th.h48.#1.ss40}\\}
 
@@ -114,9 +114,12 @@ The output ripple estimate at 48~V is \(\Delta I_L/(8f_{sw}C)+\Delta I_L\,ESR=5.
 
 Reverse polarity is blocked by Q3 and the LM74700-Q1 (loss about 0.05~W at 24~V/60~W instead of 1--2~W in a diode). RUN and OVLO dividers give 16.8~V turn-on and 58~V turn-off. The average limit holds the output current at 7.88~A; the controller's peak limit and foldback are the backup. A BAT46 clamps negative input transients at the controller.
 
-\simfigure{schematic.pdf}{Schematic, Power Stage and Control}{fig:sch}
+The full schematic is in Figure~\ref{fig:sch}. All auxiliary ICs run from INTVCC, so the board needs only the main input.
 
-Figure~\ref{fig:sch} is the full schematic. All auxiliary ICs run from INTVCC, so the board needs only the main input.
+\begin{landscape}\centering
+\includegraphics[width=\linewidth, height=0.85\textheight, keepaspectratio]{schematic.pdf}
+\captionof{figure}{Schematic, Power Stage and Control}\label{fig:sch}
+\end{landscape}
 
 % ---------------------------------------------------------------- circuit
 \chapter{Circuit Simulation}\label{ch:circuit}
@@ -233,15 +236,15 @@ The loop gain was measured on the switching model by injecting a small signal in
 
 \section{Layout}
 
-\simfigure[0.85\textwidth]{pcb3d.png}{3D View of the Board, Top Side}{fig:3d}
+\simfigure[0.7\textwidth]{pcb3d.png}{3D View of the Board, Top Side}{fig:3d}
 
 The board is 90\(\times\)65~mm, 1.6~mm, 1~oz copper on 4 layers (Figure~\ref{fig:3d}). The power path runs from J1 through Q3, the input capacitors and Q1/Q2 to L1, RS1, the output capacitors and J2, all on the top layer.
 
-\simfigure{pcb_top.pdf}{Top Copper, Silkscreen and Outline}{fig:top}
+\simfigure[0.85\textwidth]{pcb_top.pdf}{Top Copper, Silkscreen and Outline}{fig:top}
 
 Q1, Q2 and the three 100~nF capacitors form a hot loop of about 1~nH right at the top of the board (Figure~\ref{fig:top}). The controller sits next to the MOSFETs, so the gate loops are short. Power tracks keep a constant width along their run, and each large pad with several ground vias is joined to them by a small copper pour instead of separate tracks.
 
-\simfigure{pcb_bottom.pdf}{Bottom Copper and Silkscreen (Mirrored)}{fig:bot}
+\simfigure[0.75\textwidth]{pcb_bottom.pdf}{Bottom Copper and Silkscreen (Mirrored)}{fig:bot}
 
 The inner layers are a solid ground plane (In1) and the VIN/VOUT pours with inner signals (In2). The bottom layer carries signals and ground, and an exposed VIN copper area under Q1 for an optional heatsink (Figure~\ref{fig:bot}). Feedback and current-sense traces are Kelvin-connected at the shunt and routed away from the switch node.
 

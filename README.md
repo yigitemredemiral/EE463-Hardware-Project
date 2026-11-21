@@ -38,7 +38,7 @@ Nothing has been ordered or sent to a manufacturer yet. No hardware measurement 
 | [`simulation/compensation_AB/`](simulation/compensation_AB/) | Loop-gain and transient comparison of compensation A and B. |
 | [`calculations/`](calculations/) | Analytical design (duty cycle, ripple, stresses, losses, thermal). |
 | [`bom/`](bom/) | Bill of materials in the course format, full BOM with datasheets, ordering notes. |
-| [`reports/FinalReport/`](reports/FinalReport/) | Full LaTeX report (design, circuit simulation, PCB and checker, 5-minute thermal analysis). Compile `main.tex` with pdfLaTeX; all numbers come from `values.tex`. PCB-checker reports in `pcb_checker/`. |
+| [`reports/FinalReport/`](reports/FinalReport/) | Full report ([PDF](reports/FinalReport/EE463_Final_Report.pdf); design, circuit simulation, PCB and checker, 5-minute thermal analysis). Compile `main.tex` with pdfLaTeX; all numbers come from `values.tex`. PCB-checker reports in `pcb_checker/`. |
 | [`simulation/analysis_RevF4/`](simulation/analysis_RevF4/) | Scripts behind the final report: LTspice batch runs, loss breakdown, loop gain, 4-layer thermal model, copper current flow. |
 | [`reports/`](reports/) | Pre-report, control-loop section, figures. |
 | [`docs/design_review/`](docs/design_review/) | Design review and revision notes (Turkish), RevD5E1 → RevF1 → RevF2. |
