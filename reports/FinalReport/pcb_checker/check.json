@@ -1,0 +1,783 @@
+{
+ "title": "EE463 PCB Check",
+ "board": "EE463_Buck_RevF4",
+ "source": "C:\\Users\\user\\Documents\\EE463_Buck_RevF2_Final\\KiCad_RevF4\\EE463_Buck_RevF4.kicad_pcb",
+ "meta": {
+  "Board size": "90.0 x 65.0 mm",
+  "Copper layers": "4",
+  "Thickness": "1.6 mm",
+  "Copper": "1 oz",
+  "Parts": "92",
+  "Tracks / vias": "414 / 223",
+  "Checked for": "5 A out",
+  "KiCad file": "10.0"
+ },
+ "settings": {
+  "Checker": "pcbcheck 1.0.0",
+  "Project": "EE463 DC-DC converter: 20-48 V in, 12 V / 5 A out (use --overload to check for 7.5 A)",
+  "Fab limits": "PCBWay standard price (track/space 0.15 mm, drill 0.3 mm, 2 layers, 1.6 mm, 1 oz)",
+  "Config file": "C:/Users/user/Documents/EE463_Buck_RevF2_Final/KiCad_RevF4\\pcb_checker.json"
+ },
+ "verdict": "Almost: fix or explain 1 warning(s) before you send the files.",
+ "counts": {
+  "error": 0,
+  "warning": 1,
+  "info": 6
+ },
+ "detected": [
+  {
+   "heading": "Parts",
+   "lines": [
+    "Topology guess: synchronous buck (two switches on the switch node)",
+    "Power switches (MOSFETs): Q1, Q2, Q3",
+    "Power diodes: none found",
+    "Inductors / transformers: L1",
+    "Controller / driver ICs: U5",
+    "Power connectors: J1, J2",
+    "Input capacitors: none found",
+    "Output capacitors: none found",
+    "Current-sense shunts: RS1",
+    "Fuses: none found   TVS: none found",
+    "Test points: TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15, TP16"
+   ]
+  },
+  {
+   "heading": "Nets",
+   "lines": [
+    "Input side (up to 48 V, ~3.5 A): /VIN, /VIN_RAW",
+    "Switch node(s) (up to ~60 V peak): /SW",
+    "Output side (12 V, 5 A): /VOUT",
+    "Ground: GND",
+    "Other high-current nets (checked as up to 48 V, 5 A): /SENSEP"
+   ]
+  },
+  {
+   "heading": "Gate drive and control",
+   "lines": [
+    "Q3 gate (/IDGATE) <- U5 pin 5",
+    "Q1 gate (/GH) <- no driver IC found",
+    "Q2 gate (/GL) <- no driver IC found"
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "id": "FAB-STACKUP",
+   "category": "fab",
+   "title": "Layers, thickness and copper weight",
+   "status": "warning",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "FAB-STACKUP",
+     "severity": "warning",
+     "title": "Layers, thickness and copper weight",
+     "message": "The board has 4 copper layers. PCBWay's standard price is for 2 layers; 4 layers cost extra and may not be covered by the sponsored round.",
+     "fix": "Ask the course staff before ordering more than 2 layers, or move the design to 2 layers.",
+     "rule": "PCBWay standard price",
+     "refs": [],
+     "waived": "",
+     "locations": []
+    }
+   ]
+  },
+  {
+   "id": "FAB-OUTLINE",
+   "category": "fab",
+   "title": "Board outline (Edge.Cuts)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-ZONES",
+   "category": "fab",
+   "title": "Copper pours filled",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-TRACK",
+   "category": "fab",
+   "title": "Minimum track width",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-CLEAR",
+   "category": "fab",
+   "title": "Copper-to-copper spacing",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-DRILL",
+   "category": "fab",
+   "title": "Drill sizes and via types",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-RING",
+   "category": "fab",
+   "title": "Annular rings",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-SLOT",
+   "category": "fab",
+   "title": "Slot widths",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-HOLES",
+   "category": "fab",
+   "title": "Hole-to-hole spacing",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-EDGE",
+   "category": "fab",
+   "title": "Copper to board edge",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-SILK",
+   "category": "fab",
+   "title": "Silkscreen text size",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "FAB-SILK",
+     "severity": "info",
+     "title": "Silkscreen text size",
+     "message": "17 silkscreen text(s) are under 1.0 mm high.",
+     "fix": "",
+     "rule": "PCBWay 0.8 mm height, 0.15 mm line",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 104.5,
+       "y": 134.0,
+       "layer": "F.SilkS",
+       "label": "'20-48V' 0.8 mm"
+      },
+      {
+       "x": 181.0,
+       "y": 142.0,
+       "layer": "F.SilkS",
+       "label": "'12V OUT' 0.8 mm"
+      },
+      {
+       "x": 136.8,
+       "y": 98.0,
+       "layer": "B.SilkS",
+       "label": "'HEATSINK AREA = VIN!' 0.8 mm"
+      },
+      {
+       "x": 117.6,
+       "y": 103.5,
+       "layer": "F.SilkS",
+       "label": "'Q3' 0.8 mm (Q3)"
+      },
+      {
+       "x": 140.5,
+       "y": 105.0,
+       "layer": "F.SilkS",
+       "label": "'Q1' 0.8 mm (Q1)"
+      },
+      {
+       "x": 119.75,
+       "y": 116.746,
+       "layer": "F.SilkS",
+       "label": "'CINT1' 0.8 mm (CINT1)"
+      },
+      {
+       "x": 131.29,
+       "y": 105.047,
+       "layer": "F.SilkS",
+       "label": "'CHF3' 0.9 mm (CHF3)"
+      },
+      {
+       "x": 122.0,
+       "y": 122.504,
+       "layer": "F.SilkS",
+       "label": "'RITH1' 0.8 mm (RITH1)"
+      },
+      {
+       "x": 114.9,
+       "y": 115.4,
+       "layer": "F.SilkS",
+       "label": "'CVCAP1' 0.8 mm (CVCAP1)"
+      },
+      {
+       "x": 129.175,
+       "y": 102.1,
+       "layer": "F.SilkS",
+       "label": "'CHF2' 0.8 mm (CHF2)"
+      },
+      {
+       "x": 109.6,
+       "y": 110.6,
+       "layer": "F.SilkS",
+       "label": "'CANODE1' 0.8 mm (CANODE1)"
+      },
+      {
+       "x": 112.975,
+       "y": 96.325,
+       "layer": "F.SilkS",
+       "label": "'CCATH1' 0.8 mm (CCATH1)"
+      },
+      {
+       "x": 147.246,
+       "y": 142.31,
+       "layer": "F.SilkS",
+       "label": "'RISO1' 0.8 mm (RISO1)"
+      },
+      {
+       "x": 119.585,
+       "y": 103.853,
+       "layer": "F.SilkS",
+       "label": "'ROVB1' 0.8 mm (ROVB1)"
+      },
+      {
+       "x": 137.892,
+       "y": 120.667,
+       "layer": "F.SilkS",
+       "label": "'RGL1' 0.8 mm (RGL1)"
+      },
+      {
+       "x": 126.473,
+       "y": 122.648,
+       "layer": "F.SilkS",
+       "label": "'CRUN1' 0.8 mm (CRUN1)"
+      },
+      {
+       "x": 124.55,
+       "y": 126.5,
+       "layer": "F.SilkS",
+       "label": "'CITH1' 0.8 mm (CITH1)"
+      }
+     ]
+    },
+    {
+     "check": "FAB-SILK",
+     "severity": "info",
+     "title": "Silkscreen text size",
+     "message": "14 silkscreen text(s) have a stroke under 0.15 mm and may print broken.",
+     "fix": "",
+     "rule": "PCBWay 0.8 mm height, 0.15 mm line",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 136.8,
+       "y": 98.0,
+       "layer": "B.SilkS",
+       "label": "'HEATSINK AREA = VIN!' stroke 0.12 mm"
+      },
+      {
+       "x": 117.6,
+       "y": 103.5,
+       "layer": "F.SilkS",
+       "label": "'Q3' stroke 0.12 mm"
+      },
+      {
+       "x": 140.5,
+       "y": 105.0,
+       "layer": "F.SilkS",
+       "label": "'Q1' stroke 0.13 mm"
+      },
+      {
+       "x": 119.75,
+       "y": 116.746,
+       "layer": "F.SilkS",
+       "label": "'CINT1' stroke 0.13 mm"
+      },
+      {
+       "x": 122.0,
+       "y": 122.504,
+       "layer": "F.SilkS",
+       "label": "'RITH1' stroke 0.13 mm"
+      },
+      {
+       "x": 114.9,
+       "y": 115.4,
+       "layer": "F.SilkS",
+       "label": "'CVCAP1' stroke 0.12 mm"
+      },
+      {
+       "x": 129.175,
+       "y": 102.1,
+       "layer": "F.SilkS",
+       "label": "'CHF2' stroke 0.12 mm"
+      },
+      {
+       "x": 109.6,
+       "y": 110.6,
+       "layer": "F.SilkS",
+       "label": "'CANODE1' stroke 0.12 mm"
+      },
+      {
+       "x": 112.975,
+       "y": 96.325,
+       "layer": "F.SilkS",
+       "label": "'CCATH1' stroke 0.12 mm"
+      },
+      {
+       "x": 147.246,
+       "y": 142.31,
+       "layer": "F.SilkS",
+       "label": "'RISO1' stroke 0.12 mm"
+      },
+      {
+       "x": 119.585,
+       "y": 103.853,
+       "layer": "F.SilkS",
+       "label": "'ROVB1' stroke 0.13 mm"
+      },
+      {
+       "x": 137.892,
+       "y": 120.667,
+       "layer": "F.SilkS",
+       "label": "'RGL1' stroke 0.13 mm"
+      },
+      {
+       "x": 126.473,
+       "y": 122.648,
+       "layer": "F.SilkS",
+       "label": "'CRUN1' stroke 0.12 mm"
+      },
+      {
+       "x": 124.55,
+       "y": 126.5,
+       "layer": "F.SilkS",
+       "label": "'CITH1' stroke 0.13 mm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PWR-FOUND",
+   "category": "power",
+   "title": "Power stage recognised",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-WIDTH",
+   "category": "power",
+   "title": "Power track width for the rated current",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-VIAS",
+   "category": "power",
+   "title": "Vias where the power path changes layer",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-SPACING",
+   "category": "power",
+   "title": "Spacing for 48 V (exposed pads)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-CONN",
+   "category": "power",
+   "title": "Input/output connectors",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-CAPV",
+   "category": "power",
+   "title": "Capacitor voltage ratings",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-LOOP",
+   "category": "power",
+   "title": "Hot loop: input capacitor at the switches",
+   "status": "skipped",
+   "skipped": "input side not identified",
+   "findings": []
+  },
+  {
+   "id": "PWR-GATE",
+   "category": "power",
+   "title": "Gate driver close to the MOSFETs",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "PWR-GATE",
+     "severity": "info",
+     "title": "Gate driver close to the MOSFETs",
+     "message": "Could not trace the gate of Q1 (/GH) to a driver IC. Check by hand that the driver is close and the gate loop is short.",
+     "fix": "",
+     "rule": "SMPS-014",
+     "refs": [
+      "Q1"
+     ],
+     "waived": "",
+     "locations": [
+      {
+       "x": 138.905,
+       "y": 107.825,
+       "layer": "",
+       "label": "Q1"
+      }
+     ]
+    },
+    {
+     "check": "PWR-GATE",
+     "severity": "info",
+     "title": "Gate driver close to the MOSFETs",
+     "message": "Could not trace the gate of Q2 (/GL) to a driver IC. Check by hand that the driver is close and the gate loop is short.",
+     "fix": "",
+     "rule": "SMPS-014",
+     "refs": [
+      "Q2"
+     ],
+     "waived": "",
+     "locations": [
+      {
+       "x": 138.905,
+       "y": 116.825,
+       "layer": "",
+       "label": "Q2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PWR-BOOT",
+   "category": "power",
+   "title": "Bootstrap capacitor at the driver",
+   "status": "skipped",
+   "skipped": "no bootstrap capacitor found",
+   "findings": []
+  },
+  {
+   "id": "PWR-FB",
+   "category": "power",
+   "title": "Feedback divider and feedback routing",
+   "status": "skipped",
+   "skipped": "no FB pin found (KiCad needs pin names from the schematic)",
+   "findings": []
+  },
+  {
+   "id": "PWR-MAG",
+   "category": "power",
+   "title": "No tracks under inductors and transformers",
+   "status": "pass",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "PWR-MAG",
+     "severity": "warning",
+     "title": "No tracks under inductors and transformers",
+     "message": "Tracks of /VOUT run under L1. The magnetic field couples noise into them.",
+     "fix": "Route around the inductor; only a ground pour should be under it.",
+     "rule": "SMPS-006",
+     "refs": [
+      "L1"
+     ],
+     "waived": "0.2 mm DC VOUT sense trace on B.Cu; L1 (XAL1510) is shielded and the solid In1.Cu GND plane lies between L1 and the trace. Routing above L1 is blocked by the VIN heatsink copper.",
+     "locations": [
+      {
+       "x": 145.481,
+       "y": 105.1,
+       "layer": "B.Cu",
+       "label": "/VOUT"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PWR-THERMAL",
+   "category": "power",
+   "title": "Copper for cooling the power parts",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "PWR-THERMAL",
+     "severity": "info",
+     "title": "Copper for cooling the power parts",
+     "message": "No thermal vias at Q2 pad 5. Vias under/next to the pad move heat to the other layer.",
+     "fix": "Add 0.3 mm vias at about 1-1.2 mm pitch in or next to the pad.",
+     "rule": "THM-001/007",
+     "refs": [
+      "Q2"
+     ],
+     "waived": "",
+     "locations": [
+      {
+       "x": 137.0,
+       "y": 113.325,
+       "layer": "F.Cu",
+       "label": "Q2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PWR-GND",
+   "category": "power",
+   "title": "Ground pour",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-DECAP",
+   "category": "layout",
+   "title": "Decoupling capacitors at IC supply pins",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-ACUTE",
+   "category": "layout",
+   "title": "No acute track angles",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-CORNER",
+   "category": "layout",
+   "title": "Track corners at 45\u00b0",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "LAY-CORNER",
+     "severity": "info",
+     "title": "Track corners at 45\u00b0",
+     "message": "17 track corner(s) are 90\u00b0. Use 45\u00b0 corners (or arcs).",
+     "fix": "",
+     "rule": "EST-001",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 164.6,
+       "y": 109.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /SENSEP"
+      },
+      {
+       "x": 164.6,
+       "y": 105.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /SENSEP"
+      },
+      {
+       "x": 123.9,
+       "y": 105.6,
+       "layer": "B.Cu",
+       "label": "90\u00b0 on /SENSEP"
+      },
+      {
+       "x": 165.4,
+       "y": 109.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /VOUT"
+      },
+      {
+       "x": 184.0,
+       "y": 129.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /VOUT"
+      },
+      {
+       "x": 123.0,
+       "y": 105.1,
+       "layer": "B.Cu",
+       "label": "90\u00b0 on /VOUT"
+      },
+      {
+       "x": 130.75,
+       "y": 110.5,
+       "layer": "In2.Cu",
+       "label": "90\u00b0 on /VOUT"
+      },
+      {
+       "x": 135.095,
+       "y": 110.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /SW"
+      },
+      {
+       "x": 143.601,
+       "y": 124.357,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /SW"
+      },
+      {
+       "x": 145.0,
+       "y": 109.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /SW"
+      },
+      {
+       "x": 122.0,
+       "y": 111.274,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /ITH"
+      },
+      {
+       "x": 122.888,
+       "y": 110.95,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /ITH"
+      },
+      {
+       "x": 129.974,
+       "y": 107.592,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /INTVCC"
+      },
+      {
+       "x": 123.876,
+       "y": 113.183,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /INTVCC"
+      },
+      {
+       "x": 143.2,
+       "y": 109.2,
+       "layer": "In2.Cu",
+       "label": "90\u00b0 on /TG"
+      },
+      {
+       "x": 132.5,
+       "y": 109.2,
+       "layer": "In2.Cu",
+       "label": "90\u00b0 on /TG"
+      },
+      {
+       "x": 132.174,
+       "y": 121.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /DRVCC"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "LAY-DANGLE",
+   "category": "layout",
+   "title": "No dangling track ends",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-VIAPAD",
+   "category": "layout",
+   "title": "No open vias in SMD pads",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "TST-POINTS",
+   "category": "test",
+   "title": "Test points (EE463: verify supplies and gate signals)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "TST-INFO",
+   "category": "test",
+   "title": "Board identification on the silkscreen",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "ASM-SPACING",
+   "category": "test",
+   "title": "Room between parts for hand soldering",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "ASM-SMALL",
+   "category": "test",
+   "title": "Part sizes you can hand-solder",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "MEC-HOLES",
+   "category": "test",
+   "title": "Mounting holes",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "DRC",
+   "category": "drc",
+   "title": "KiCad design rules check (DRC)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "DRC-UNROUTED",
+   "category": "drc",
+   "title": "Everything routed",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "DRC-PARITY",
+   "category": "drc",
+   "title": "Board matches the schematic",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  }
+ ],
+ "notes": []
+}

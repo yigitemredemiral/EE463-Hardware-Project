@@ -1,0 +1,13 @@
+{
+  "overload": false,
+  "copper_oz": 1,
+  "nets": {
+    "input": ["/VIN", "/VIN_RAW"],
+    "output": ["/VOUT"],
+    "gnd": ["GND"],
+    "sw": ["/SW"]
+  },
+  "waivers": [
+    {"check": "PWR-MAG", "ref": "L1", "reason": "0.2 mm DC VOUT sense trace on B.Cu; L1 (XAL1510) is shielded and the solid In1.Cu GND plane lies between L1 and the trace. Routing above L1 is blocked by the VIN heatsink copper."}
+  ]
+}
