@@ -54,7 +54,7 @@ Yasin Baytemir & 2627503 \\
 % ---------------------------------------------------------------- intro
 \chapter{Introduction}
 
-The board converts 20--48~V to 12~V at 5~A (60~W) with closed-loop control, and also carries 7.5~A (90~W) for the overload bonus. It is a synchronous buck with the LTC3895 peak current-mode controller, an external average current limit, an ideal-diode input stage for reverse polarity, and a 4-layer \(90\times65\)~mm PCB. Chapter~\ref{ch:design} gives the design and the component choices. Chapter~\ref{ch:circuit} gives the circuit simulations: steady state at all input voltages, switching edges, efficiency and losses, start-up, load and line steps, overload and loop gain. Chapter~\ref{ch:pcb} covers the layout, the course PCB checker and the current flow in the copper. Chapter~\ref{ch:thermal} gives the temperatures for five minutes of continuous operation and for steady state.
+The board converts 20--48~V to 12~V at 5~A (60~W) with closed-loop control, and also carries 7.5~A (90~W) for the overload bonus. It is a synchronous buck with the LTC3895 peak current-mode controller, an external average current limit, an ideal-diode input stage for reverse polarity, and a 4-layer \(130\times78\)~mm PCB. This report describes revision G, which follows the presentation feedback: three identical TO-220 MOSFETs on PCB heatsinks, an input fuse, an on/off switch, status LEDs, an optional average current-limit loop, 0805 passives and outward-facing connectors (Section~\ref{sec:revg}). The circuit and thermal simulations were run on the previous revision (F4, SMD MOSFETs, \(90\times65\)~mm); the control loop and power stage values are unchanged, and the differences are discussed where they matter. Chapter~\ref{ch:design} gives the design and the component choices. Chapter~\ref{ch:circuit} gives the circuit simulations: steady state at all input voltages, switching edges, efficiency and losses, start-up, load and line steps, overload and loop gain. Chapter~\ref{ch:pcb} covers the layout, the course PCB checker and the current flow in the copper. Chapter~\ref{ch:thermal} gives the temperatures for five minutes of continuous operation and for steady state.
 
 All circuit results come from the full switching model with the vendor models of the controller, op amps and MOSFETs, plus estimated parasitics (hot loop 5~nH with snubber, gate loops, traces, capacitor ESR/ESL, 0.5--1~\textmu H supply cable). Steady-state values are taken over the last 2~ms of a 14~ms run. Temperatures come from a finite-volume model of the real board copper with the losses from the circuit simulation.
 
@@ -81,7 +81,7 @@ The input is always above the output, so a step-down stage is enough and no isol
 
 The LTC3895 \cite{ltc3895} runs from 4 to 140~V, has a 10~V gate driver, internal bootstrap switch, adaptive dead time and a cycle-by-cycle peak limit. At start-up INTVCC and DRVCC come from VIN; above about 7.7~V output, EXTVCC takes them from the 12~V output, which saves about 0.5~W at 48~V. No external supply is used.
 
-Current mode makes the power stage look like a current source into the output capacitor, so a Type-II network on ITH (8.2~k\(\Omega\), 27~nF, 470~pF) is enough and the loop changes little over the input range. The peak limit of the controller (10.75--14.25~A) is too loose for 7.5~A, so an average limit is added: LT6105 \cite{lt6105} across the 4~m\(\Omega\) shunt (80~mV/A), LT6654 reference \cite{lt6654} and an LT1636 integrator \cite{lt1636} that pulls ITH down through a diode:
+Current mode makes the power stage look like a current source into the output capacitor, so a Type-II network on ITH (8.2~k\(\Omega\), 27~nF, 470~pF) is enough and the loop changes little over the input range. The controller's own peak limit is always active: with ILIM tied to ground the threshold is 43--57~mV, which gives 10.75--14.25~A with the 4~m\(\Omega\) shunt. This protects the board on its own. It is too loose to hold 7.5~A, so an optional average limit is added, connected to ITH through jumper JP1 (open: loop disabled, board runs on the peak limit only; the op-amp section can also be left unpopulated): LT6105 \cite{lt6105} across the 4~m\(\Omega\) shunt (80~mV/A), LT6654 reference \cite{lt6654} and an LT1636 integrator \cite{lt1636} that pulls ITH down through a diode:
 \[
 I_{lim}=\frac{1.25\cdot 12/23.8}{20\cdot 4\,\text{m}\Omega}=7.88\ \text{A}.
 \]
@@ -98,9 +98,10 @@ The XAL1510-333 \cite{xal1510} is shielded, saturates softly and has \(I_{sat}=1
 \begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{lll}\toprule
 Part & Value & Reason \\\midrule
-Q1 high side & BSC040N08NS5 \cite{bsc040}, 80 V, 4.0 m\(\Omega\), 43 nC & low gate charge, Q1 loss is mostly switching \\
-Q2 low side & BSC026N08NS5 \cite{bsc026}, 80 V, 2.6 m\(\Omega\) & lowest \(R_{DS(on)}\), conducts 40--75 \% \\
-Q3 ideal diode & BSC026N08NS5 + LM74700-Q1 \cite{lm74700} & reverse polarity, 20 mV drop \\
+Q1, Q2, Q3 & IPP040N08NF2S \cite{ipp040}, 80 V, 4.0 m\(\Omega\), TO-220 & one part for all three, hand-solderable, heatsink mount \\
+Heatsinks & 2\(\times\) Fischer SK 104, 38.1 mm & on Q1 and Q2, natural convection, no fan \\
+Q3 driver & LM74700-Q1 \cite{lm74700} & reverse polarity, 20 mV drop \\
+F1 & 8 A time-lag Nano2 fuse in holder & input over-current, replaceable \\
 L1 & XAL1510-333, 33 \textmu H, 18.7 m\(\Omega\) & shielded, soft saturation \\
 C\(_\text{OUT}\) & 2\(\times\)330 \textmu F / 25 V polymer, 16 m\(\Omega\) & low ESR, no DC-bias loss \\
 C\(_\text{IN}\) & 10\(\times\)2.2 \textmu F/100 V X7R + 3\(\times\)100 \textmu F/100 V & 3.75 A RMS at 90 W, 24 V \\
@@ -108,17 +109,19 @@ Hot loop & 3\(\times\)100 nF/100 V at Q1 drain, 2.2 \(\Omega\) + 1 nF snubber & 
 RS1 & 4 m\(\Omega\), 2 W, 2512 & current limit sense \\\bottomrule
 \end{tabular}\end{adjustbox}\end{table}
 
-The output ripple estimate at 48~V is \(\Delta I_L/(8f_{sw}C)+\Delta I_L\,ESR=5.8+23.1=28.9\)~mV\(_\text{pp}\), well inside 120~mV. Table~\ref{tab:parts} lists the main parts. Q1 uses the higher-resistance, lower-charge part on purpose: at \(D=0.25\) its conduction loss is only 0.04~W.
+The output ripple estimate at 48~V is \(\Delta I_L/(8f_{sw}C)+\Delta I_L\,ESR=5.8+23.1=28.9\)~mV\(_\text{pp}\), well inside 120~mV. Table~\ref{tab:parts} lists the main parts. Revision F4 used two different SMD MOSFETs (BSC040N08NS5 high side, BSC026N08NS5 low side and ideal diode). The feedback was to use a single hand-solderable part that can carry a heatsink, so all three positions now use the TO-220 IPP040N08NF2S. Its resistance equals the old high-side part; Q2 and Q3 go from 2.6 to 4.0~m\(\Omega\), which adds about 0.05~W in Q2 at 24~V/60~W and about 0.1~W at 90~W. The TO-220 leads add a few nH to the hot loop, so the switch-node overshoot will be somewhat higher than in Section~\ref{sec:loop}'s simulations and must be measured.
 
 \section{Protection}
 
-Reverse polarity is blocked by Q3 and the LM74700-Q1 (loss about 0.05~W at 24~V/60~W instead of 1--2~W in a diode). RUN and OVLO dividers give 16.8~V turn-on and 58~V turn-off. The average limit holds the output current at 7.88~A; the controller's peak limit and foldback are the backup. A BAT46 clamps negative input transients at the controller.
+Reverse polarity is blocked by Q3 and the LM74700-Q1 (loss about 0.05~W at 24~V/60~W instead of 1--2~W in a diode). RUN and OVLO dividers give 16.8~V turn-on and 58~V turn-off. The average limit holds the output current at 7.88~A; the controller's peak limit and foldback are the backup. A BAT46 clamps negative input transients at the controller. An 8~A time-lag fuse F1 sits directly after the input connector.
+
+A slide switch SW1 pulls RUN to ground, so the converter can be switched off without removing the input. Three 0805 LEDs show the state: yellow from VIN (47~k\(\Omega\), 0.5--1~mA over 20--48~V), green from the 12~V output (4.7~k\(\Omega\)), and red from INTVCC through a 2.2~k\(\Omega\) resistor to the open-drain PGOOD pin, which lights when the output is out of regulation. Each LED takes its current from the rail it indicates, so no extra supply is needed.
 
 The full schematic is in Figure~\ref{fig:sch}. All auxiliary ICs run from INTVCC, so the board needs only the main input.
 
 \begin{landscape}\centering
-\includegraphics[width=\linewidth, height=0.85\textheight, keepaspectratio]{schematic.pdf}
-\captionof{figure}{Schematic, Power Stage and Control}\label{fig:sch}
+\includegraphics[width=\linewidth, height=0.85\textheight, keepaspectratio]{revg_schematic.pdf}
+\captionof{figure}{Schematic, Revision G}\label{fig:sch}
 \end{landscape}
 
 % ---------------------------------------------------------------- circuit
@@ -236,17 +239,40 @@ The loop gain was measured on the switching model by injecting a small signal in
 
 \section{Layout}
 
-\simfigure[0.7\textwidth]{pcb3d.png}{3D View of the Board, Top Side}{fig:3d}
+\section{Revision G Changes}\label{sec:revg}
 
-The board is 90\(\times\)65~mm, 1.6~mm, 1~oz copper on 4 layers (Figure~\ref{fig:3d}). The power path runs from J1 through Q3, the input capacitors and Q1/Q2 to L1, RS1, the output capacitors and J2, all on the top layer.
+\begin{table}[H]\centering\caption{Presentation Feedback and Revision G}\label{tab:revg}\small
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ll}\toprule
+Feedback & Change \\\midrule
+Same MOSFET everywhere, hand-solderable, heatsink & 3\(\times\) IPP040N08NF2S TO-220, SK 104 heatsinks on Q1/Q2, no fan \\
+Status LEDs and their supply & VIN, 12 V and FAULT (PGOOD) LEDs, each fed from its own rail \\
+Enable & slide switch on RUN \\
+Use the controller's current limit & ILIM = GND, 10.75--14.25 A peak, always on \\
+Op-amp limit optional & JP1 disconnects it from ITH; section can be unpopulated \\
+Uniform small packages & all passives 0805, shunt stays 2512 \\
+Connectors outward & J1 on the left edge, J2 on the right edge \\
+Electrolytics together & CINB1--3 in one row next to J1 \\
+Names on the board & EE463, Team CMPS and the three names on the back silkscreen \\
+Input protection & 8 A fuse F1 after J1 \\
+BOM & Excel file with links and checked stock (repository \texttt{bom/}) \\\bottomrule
+\end{tabular}\end{adjustbox}\end{table}
 
-\simfigure[0.85\textwidth]{pcb_top.pdf}{Top Copper, Silkscreen and Outline}{fig:top}
+The TO-220 parts and their heatsinks need much more room than the SMD MOSFETs, so the board grew from \(90\times65\) to \(130\times78\)~mm (Table~\ref{tab:revg}). The Q2 heatsink is screwed to the drain tab and therefore sits at switch-node potential; it must not touch anything else and keeps the courtyard clearance on all sides.
 
-Q1, Q2 and the three 100~nF capacitors form a hot loop of about 1~nH right at the top of the board (Figure~\ref{fig:top}). The controller sits next to the MOSFETs, so the gate loops are short. Power tracks keep a constant width along their run, and each large pad with several ground vias is joined to them by a small copper pour instead of separate tracks.
+\section{Layout}
 
-\simfigure[0.75\textwidth]{pcb_bottom.pdf}{Bottom Copper and Silkscreen (Mirrored)}{fig:bot}
+\simfigure[0.8\textwidth]{revg_3d_top.png}{3D View of the Board, Top Side}{fig:3d}
 
-The inner layers are a solid ground plane (In1) and the VIN/VOUT pours with inner signals (In2). The bottom layer carries signals and ground, and an exposed VIN copper area under Q1 for an optional heatsink (Figure~\ref{fig:bot}). Feedback and current-sense traces are Kelvin-connected at the shunt and routed away from the switch node.
+The board is 130\(\times\)78~mm, 1.6~mm, 1~oz copper on 4 layers (Figure~\ref{fig:3d}). Power flows left to right: J1, F1 and Q3 on the left edge, the bulk capacitors in a row below them, Q1/Q2 on their heatsinks in the middle, then L1, RS1, the output capacitors and J2 on the right edge.
+
+\simfigure[0.9\textwidth]{revg_top.pdf}{Top Copper, Silkscreen and Outline}{fig:top}
+
+The three 100~nF hot-loop capacitors sit between the Q1 and Q2 leads, and ten 2.2~\textmu F capacitors are on the bottom side directly under Q1 (Figure~\ref{fig:top}). The controller is left of the power stage with its passives in one column; the gate traces are longer than on F4 because the TO-220 leads are farther apart. The current-limit section, the LEDs and the on/off switch are along the bottom edge.
+
+\simfigure[0.9\textwidth]{revg_bottom.pdf}{Bottom Copper and Silkscreen (Mirrored)}{fig:bot}
+
+The inner layers are a solid ground plane (In1) and the VIN/VOUT pours (In2). The bottom layer carries the input MLCCs, signals, ground and the team text (Figure~\ref{fig:bot}). Feedback and current-sense traces are Kelvin-connected at the shunt and routed away from the switch node.
 
 \section{Course PCB Checker}
 
@@ -269,9 +295,11 @@ Setting & Must fix & Should fix & To check \\\midrule
 7.5 A overload & \val{chk_overload.error} & \val{chk_overload.warning} & \val{chk_overload.info} \\\bottomrule
 \end{tabular}\end{table}
 
-The only warning left is the layer count (Table~\ref{tab:chk}); the board needs the inner ground plane for the hot loop and the thermal path, so this will be agreed with the course staff before ordering. The items to check by hand are small silkscreen text, gate loops (the checker cannot trace the controller's internal drivers), no thermal vias under the Q2 drain pad (the drain is the switch node, so vias would only add switch-node area), and some 90\(^\circ\) corners on signal traces. KiCad DRC, unconnected items and schematic parity are all zero.
+The list above is for revision F4. Revision G was run through the same checker; the results are in Table~\ref{tab:chk}. There are no errors. The warnings are the layer count (the board needs the inner ground plane for the hot loop and the thermal path, to be agreed with the course staff before ordering) and silkscreen-only DRC warnings (text close to pads or the board edge, no copper effect). The items to check by hand are small silkscreen text, gate loops and 90\(^\circ\) corners on signal traces. The hot-loop, bootstrap and feedback checks are skipped by the checker because those capacitors carry descriptive names instead of a plain C prefix; they were checked by hand. KiCad DRC errors, unconnected items and schematic parity are all zero.
 
 \section{Current Flow in the Copper}
+
+This analysis and the thermal chapter were done on the revision F4 copper. The G layout uses the same pours and wider spacing, so the values are indicative.
 
 The DC current flow in the four high-current nets was solved on the real copper of all layers on a 0.2~mm grid, with the vias as resistors between layers.
 
@@ -349,7 +377,7 @@ Part & Limit & 24 V/60 W, 300 s, 25 \(^\circ\)C & 48 V/90 W, 300 s, 25 \(^\circ\
 \bottomrule
 \end{tabular}\end{adjustbox}\end{table}
 
-Even at 48~V/90~W in steady state at 40~\(^\circ\)C ambient, Q1 reaches \val{th.h48.Q1.ss40}~\(^\circ\)C and L1 \val{th.h48.L1.ss40}~\(^\circ\)C (Figure~\ref{fig:thbar}, Table~\ref{tab:th}). Every part keeps at least 44~\(^\circ\)C margin to its limit, so no heatsink or fan is needed. The electrolytic input capacitors stay close to the board temperature, which matters for their lifetime more than for their rating.
+Even at 48~V/90~W in steady state at 40~\(^\circ\)C ambient, Q1 reaches \val{th.h48.Q1.ss40}~\(^\circ\)C and L1 \val{th.h48.L1.ss40}~\(^\circ\)C (Figure~\ref{fig:thbar}, Table~\ref{tab:th}). Every part keeps at least 44~\(^\circ\)C margin to its limit even with SMD MOSFETs and no heatsink. In revision G the MOSFETs move to TO-220 packages on 38~mm heatsinks (about 13~K/W each), so their temperatures will be lower than these results; Q2's 50~\% higher resistance adds at most 0.1~W, which the heatsink more than covers. No fan is needed. The electrolytic input capacitors stay close to the board temperature, which matters for their lifetime more than for their rating.
 
 % ---------------------------------------------------------------- conclusion
 \chapter{Conclusion}
@@ -358,9 +386,9 @@ Even at 48~V/90~W in steady state at 40~\(^\circ\)C ambient, Q1 reaches \val{th.
 
 \textbf{Circuit.} The output stays within 3~mV of 12~V with at most \val{s48.rip}~mV ripple. Efficiency is \val{s24.eff}~\% at 24~V/60~W and \val{eff.avg}~\% on average over the four input points, including the estimated core loss. A 50~\% load step settles in \val{ls.settle}~ms with \val{ls.under}~mV deviation, and overload is limited at \val{fault.iout}~A. Crossover is 3--4~kHz with 57--70\(^\circ\) phase margin from 24 to 48~V; the 20~V margin and the switch-node peak (\val{h48.swpk}~V at 48~V/90~W) are the two values to measure first on the board.
 
-\textbf{PCB.} The board passes the course PCB checker with no errors at both 5~A and 7.5~A; the only open item is the 4-layer stack-up, which needs approval. The power copper has 0.5--1.1~m\(\Omega\) resistance and less than 70~mW loss.
+\textbf{PCB.} The board passes the course PCB checker with no errors at both 5~A and 7.5~A; the open items are the 4-layer stack-up, which needs approval, and silkscreen DRC warnings. Revision G adds the presentation feedback: identical TO-220 MOSFETs on heatsinks, fuse, on/off switch, status LEDs and an optional current-limit loop. The power copper has 0.5--1.1~m\(\Omega\) resistance and less than 70~mW loss.
 
-\textbf{Thermal.} After five minutes at 25~\(^\circ\)C ambient the hottest junction is \val{th.s24.Q1.t300}~\(^\circ\)C at 24~V/60~W and \val{th.h48.Q1.t300}~\(^\circ\)C at 48~V/90~W. In steady state at 40~\(^\circ\)C it is \val{th.h48.Q1.ss40}~\(^\circ\)C. The board needs no heatsink or fan.
+\textbf{Thermal.} After five minutes at 25~\(^\circ\)C ambient the hottest junction is \val{th.s24.Q1.t300}~\(^\circ\)C at 24~V/60~W and \val{th.h48.Q1.t300}~\(^\circ\)C at 48~V/90~W. In steady state at 40~\(^\circ\)C it is \val{th.h48.Q1.ss40}~\(^\circ\)C. These are revision F4 results without heatsinks; the revision G heatsinks only add margin, and no fan is needed.
 
 % ---------------------------------------------------------------- references
 \begin{thebibliography}{9}
@@ -371,6 +399,7 @@ Even at 48~V/90~W in steady state at 40~\(^\circ\)C ambient, Q1 reaches \val{th.
 \bibitem{lm74700} Texas Instruments, \emph{LM74700-Q1: Low IQ Reverse Battery Protection Ideal Diode Controller}, datasheet.
 \bibitem{bsc040} Infineon, \emph{BSC040N08NS5: OptiMOS 5 Power MOSFET, 80 V}, datasheet.
 \bibitem{bsc026} Infineon, \emph{BSC026N08NS5: OptiMOS 5 Power MOSFET, 80 V}, datasheet.
+\bibitem{ipp040} Infineon, \emph{IPP040N08NF2S: OptiMOS Power MOSFET, 80 V, TO-220}, datasheet.
 \bibitem{xal1510} Coilcraft, \emph{XAL1510 Series Shielded Power Inductors}, datasheet.
 \bibitem{ipc2221} IPC, \emph{IPC-2221B: Generic Standard on Printed Board Design}, 2012.
 \end{thebibliography}

@@ -1,0 +1,11 @@
+{
+  "overload": false,
+  "copper_oz": 1,
+  "nets": {
+    "input": ["/VIN", "/VIN_RAW", "Net-(J1-Pin_1)"],
+    "output": ["/VOUT"],
+    "gnd": ["GND"],
+    "sw": ["/SW"]
+  },
+  "waivers": []
+}

@@ -1,0 +1,1150 @@
+{
+ "title": "EE463 PCB Check",
+ "board": "EE463_Buck_RevG",
+ "source": "hardware\\kicad_RevG\\EE463_Buck_RevG.kicad_pcb",
+ "meta": {
+  "Board size": "130.0 x 78.0 mm",
+  "Copper layers": "4",
+  "Thickness": "1.6 mm",
+  "Copper": "1 oz",
+  "Parts": "105",
+  "Tracks / vias": "371 / 94",
+  "Checked for": "5 A out",
+  "KiCad file": "10.0"
+ },
+ "settings": {
+  "Checker": "pcbcheck 1.0.0",
+  "Project": "EE463 DC-DC converter: 20-48 V in, 12 V / 5 A out (use --overload to check for 7.5 A)",
+  "Fab limits": "PCBWay standard price (track/space 0.15 mm, drill 0.3 mm, 2 layers, 1.6 mm, 1 oz)",
+  "Config file": "hardware\\kicad_RevG\\pcb_checker.json"
+ },
+ "verdict": "Almost: fix or explain 3 warning(s) before you send the files.",
+ "counts": {
+  "error": 0,
+  "warning": 3,
+  "info": 6
+ },
+ "detected": [
+  {
+   "heading": "Parts",
+   "lines": [
+    "Topology guess: synchronous buck (two switches on the switch node)",
+    "Power switches (MOSFETs): Q1, Q2, Q3",
+    "Power diodes: none found",
+    "Inductors / transformers: L1",
+    "Controller / driver ICs: U5",
+    "Power connectors: J1, J2",
+    "Input capacitors: none found",
+    "Output capacitors: none found",
+    "Current-sense shunts: RS1",
+    "Fuses: F1   TVS: none found",
+    "Test points: TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15, TP16"
+   ]
+  },
+  {
+   "heading": "Nets",
+   "lines": [
+    "Input side (up to 48 V, ~3.5 A): /VIN, /VIN_RAW, Net-(J1-Pin_1)",
+    "Switch node(s) (up to ~60 V peak): /SW",
+    "Output side (12 V, 5 A): /VOUT",
+    "Ground: GND",
+    "Other high-current nets (checked as up to 48 V, 5 A): /SENSEP"
+   ]
+  },
+  {
+   "heading": "Gate drive and control",
+   "lines": [
+    "Q1 gate (/GH) <- no driver IC found",
+    "Q2 gate (/GL) <- no driver IC found",
+    "Q3 gate (/IDGATE) <- U5 pin 5"
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "id": "FAB-STACKUP",
+   "category": "fab",
+   "title": "Layers, thickness and copper weight",
+   "status": "warning",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "FAB-STACKUP",
+     "severity": "warning",
+     "title": "Layers, thickness and copper weight",
+     "message": "The board has 4 copper layers. PCBWay's standard price is for 2 layers; 4 layers cost extra and may not be covered by the sponsored round.",
+     "fix": "Ask the course staff before ordering more than 2 layers, or move the design to 2 layers.",
+     "rule": "PCBWay standard price",
+     "refs": [],
+     "waived": "",
+     "locations": []
+    }
+   ]
+  },
+  {
+   "id": "FAB-OUTLINE",
+   "category": "fab",
+   "title": "Board outline (Edge.Cuts)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-ZONES",
+   "category": "fab",
+   "title": "Copper pours filled",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-TRACK",
+   "category": "fab",
+   "title": "Minimum track width",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-CLEAR",
+   "category": "fab",
+   "title": "Copper-to-copper spacing",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-DRILL",
+   "category": "fab",
+   "title": "Drill sizes and via types",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-RING",
+   "category": "fab",
+   "title": "Annular rings",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-SLOT",
+   "category": "fab",
+   "title": "Slot widths",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-HOLES",
+   "category": "fab",
+   "title": "Hole-to-hole spacing",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-EDGE",
+   "category": "fab",
+   "title": "Copper to board edge",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "FAB-SILK",
+   "category": "fab",
+   "title": "Silkscreen text size",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "FAB-SILK",
+     "severity": "info",
+     "title": "Silkscreen text size",
+     "message": "32 silkscreen text(s) are under 1.0 mm high.",
+     "fix": "",
+     "rule": "PCBWay 0.8 mm height, 0.15 mm line",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 135.5,
+       "y": 133.605,
+       "layer": "F.SilkS",
+       "label": "'CITHP1' 0.8 mm (CITHP1)"
+      },
+      {
+       "x": 150.395,
+       "y": 125.6,
+       "layer": "F.SilkS",
+       "label": "'CBOOT1' 0.8 mm (CBOOT1)"
+      },
+      {
+       "x": 130.5,
+       "y": 115.405,
+       "layer": "F.SilkS",
+       "label": "'CRUN1' 0.8 mm (CRUN1)"
+      },
+      {
+       "x": 154.0,
+       "y": 166.35,
+       "layer": "F.SilkS",
+       "label": "'DLED3' 0.8 mm (DLED3)"
+      },
+      {
+       "x": 119.8,
+       "y": 121.205,
+       "layer": "F.SilkS",
+       "label": "'CANODE1' 0.8 mm (CANODE1)"
+      },
+      {
+       "x": 135.5,
+       "y": 116.195,
+       "layer": "F.SilkS",
+       "label": "'CSS1' 0.8 mm (CSS1)"
+      },
+      {
+       "x": 212.705,
+       "y": 157.5,
+       "layer": "F.SilkS",
+       "label": "'CREF1' 0.8 mm (CREF1)"
+      },
+      {
+       "x": 167.5,
+       "y": 113.15,
+       "layer": "F.SilkS",
+       "label": "'Q1' 0.8 mm (Q1)"
+      },
+      {
+       "x": 183.5,
+       "y": 163.205,
+       "layer": "F.SilkS",
+       "label": "'CERR1' 0.8 mm (CERR1)"
+      },
+      {
+       "x": 186.095,
+       "y": 146.47,
+       "layer": "F.SilkS",
+       "label": "'U2' 0.8 mm (U2)"
+      },
+      {
+       "x": 187.805,
+       "y": 151.6,
+       "layer": "F.SilkS",
+       "label": "'C1' 0.8 mm (C1)"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "F.SilkS",
+       "label": "'CVCAP1' 0.8 mm (CVCAP1)"
+      },
+      {
+       "x": 126.205,
+       "y": 114.0,
+       "layer": "F.SilkS",
+       "label": "'CCATH1' 0.8 mm (CCATH1)"
+      },
+      {
+       "x": 170.04,
+       "y": 128.95,
+       "layer": "F.SilkS",
+       "label": "'Q2' 0.8 mm (Q2)"
+      },
+      {
+       "x": 135.0,
+       "y": 112.395,
+       "layer": "F.SilkS",
+       "label": "'CSENSE1' 0.8 mm (CSENSE1)"
+      },
+      {
+       "x": 149.6,
+       "y": 125.205,
+       "layer": "F.SilkS",
+       "label": "'CDRV1' 0.8 mm (CDRV1)"
+      },
+      {
+       "x": 135.5,
+       "y": 131.005,
+       "layer": "F.SilkS",
+       "label": "'CITH1' 0.8 mm (CITH1)"
+      },
+      {
+       "x": 165.295,
+       "y": 121.05,
+       "layer": "F.SilkS",
+       "label": "'CHF1' 0.8 mm (CHF1)"
+      },
+      {
+       "x": 111.0,
+       "y": 121.0,
+       "layer": "F.SilkS",
+       "label": "'F1' 0.8 mm (F1)"
+      },
+      {
+       "x": 118.54,
+       "y": 112.1,
+       "layer": "F.SilkS",
+       "label": "'Q3' 0.8 mm (Q3)"
+      },
+      {
+       "x": 203.225,
+       "y": 163.425,
+       "layer": "F.SilkS",
+       "label": "'U4' 0.8 mm (U4)"
+      },
+      {
+       "x": 140.0,
+       "y": 166.35,
+       "layer": "F.SilkS",
+       "label": "'DLED1' 0.8 mm (DLED1)"
+      },
+      {
+       "x": 130.5,
+       "y": 133.605,
+       "layer": "F.SilkS",
+       "label": "'CAUX1' 0.8 mm (CAUX1)"
+      },
+      {
+       "x": 141.0,
+       "y": 130.805,
+       "layer": "F.SilkS",
+       "label": "'CINT1' 0.8 mm (CINT1)"
+      },
+      {
+       "x": 212.405,
+       "y": 163.8,
+       "layer": "F.SilkS",
+       "label": "'C3' 0.8 mm (C3)"
+      },
+      {
+       "x": 200.205,
+       "y": 151.5,
+       "layer": "F.SilkS",
+       "label": "'CCS1' 0.8 mm (CCS1)"
+      },
+      {
+       "x": 147.0,
+       "y": 166.35,
+       "layer": "F.SilkS",
+       "label": "'DLED2' 0.8 mm (DLED2)"
+      },
+      {
+       "x": 185.575,
+       "y": 164.425,
+       "layer": "F.SilkS",
+       "label": "'U3' 0.8 mm (U3)"
+      },
+      {
+       "x": 195.8,
+       "y": 159.205,
+       "layer": "F.SilkS",
+       "label": "'C2' 0.8 mm (C2)"
+      },
+      {
+       "x": 167.165,
+       "y": 121.05,
+       "layer": "B.SilkS",
+       "label": "'CHF3' 0.8 mm (CHF3)"
+      },
+      {
+       "x": 182.5,
+       "y": 118.795,
+       "layer": "B.SilkS",
+       "label": "'CSN1' 0.8 mm (CSN1)"
+      },
+      {
+       "x": 169.705,
+       "y": 121.05,
+       "layer": "B.SilkS",
+       "label": "'CHF2' 0.8 mm (CHF2)"
+      }
+     ]
+    },
+    {
+     "check": "FAB-SILK",
+     "severity": "info",
+     "title": "Silkscreen text size",
+     "message": "32 silkscreen text(s) have a stroke under 0.15 mm and may print broken.",
+     "fix": "",
+     "rule": "PCBWay 0.8 mm height, 0.15 mm line",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 135.5,
+       "y": 133.605,
+       "layer": "F.SilkS",
+       "label": "'CITHP1' stroke 0.12 mm"
+      },
+      {
+       "x": 150.395,
+       "y": 125.6,
+       "layer": "F.SilkS",
+       "label": "'CBOOT1' stroke 0.12 mm"
+      },
+      {
+       "x": 130.5,
+       "y": 115.405,
+       "layer": "F.SilkS",
+       "label": "'CRUN1' stroke 0.12 mm"
+      },
+      {
+       "x": 154.0,
+       "y": 166.35,
+       "layer": "F.SilkS",
+       "label": "'DLED3' stroke 0.12 mm"
+      },
+      {
+       "x": 119.8,
+       "y": 121.205,
+       "layer": "F.SilkS",
+       "label": "'CANODE1' stroke 0.12 mm"
+      },
+      {
+       "x": 135.5,
+       "y": 116.195,
+       "layer": "F.SilkS",
+       "label": "'CSS1' stroke 0.12 mm"
+      },
+      {
+       "x": 212.705,
+       "y": 157.5,
+       "layer": "F.SilkS",
+       "label": "'CREF1' stroke 0.12 mm"
+      },
+      {
+       "x": 167.5,
+       "y": 113.15,
+       "layer": "F.SilkS",
+       "label": "'Q1' stroke 0.12 mm"
+      },
+      {
+       "x": 183.5,
+       "y": 163.205,
+       "layer": "F.SilkS",
+       "label": "'CERR1' stroke 0.12 mm"
+      },
+      {
+       "x": 186.095,
+       "y": 146.47,
+       "layer": "F.SilkS",
+       "label": "'U2' stroke 0.12 mm"
+      },
+      {
+       "x": 187.805,
+       "y": 151.6,
+       "layer": "F.SilkS",
+       "label": "'C1' stroke 0.12 mm"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "F.SilkS",
+       "label": "'CVCAP1' stroke 0.12 mm"
+      },
+      {
+       "x": 126.205,
+       "y": 114.0,
+       "layer": "F.SilkS",
+       "label": "'CCATH1' stroke 0.12 mm"
+      },
+      {
+       "x": 170.04,
+       "y": 128.95,
+       "layer": "F.SilkS",
+       "label": "'Q2' stroke 0.12 mm"
+      },
+      {
+       "x": 135.0,
+       "y": 112.395,
+       "layer": "F.SilkS",
+       "label": "'CSENSE1' stroke 0.12 mm"
+      },
+      {
+       "x": 149.6,
+       "y": 125.205,
+       "layer": "F.SilkS",
+       "label": "'CDRV1' stroke 0.12 mm"
+      },
+      {
+       "x": 135.5,
+       "y": 131.005,
+       "layer": "F.SilkS",
+       "label": "'CITH1' stroke 0.12 mm"
+      },
+      {
+       "x": 165.295,
+       "y": 121.05,
+       "layer": "F.SilkS",
+       "label": "'CHF1' stroke 0.12 mm"
+      },
+      {
+       "x": 111.0,
+       "y": 121.0,
+       "layer": "F.SilkS",
+       "label": "'F1' stroke 0.12 mm"
+      },
+      {
+       "x": 118.54,
+       "y": 112.1,
+       "layer": "F.SilkS",
+       "label": "'Q3' stroke 0.12 mm"
+      },
+      {
+       "x": 203.225,
+       "y": 163.425,
+       "layer": "F.SilkS",
+       "label": "'U4' stroke 0.12 mm"
+      },
+      {
+       "x": 140.0,
+       "y": 166.35,
+       "layer": "F.SilkS",
+       "label": "'DLED1' stroke 0.12 mm"
+      },
+      {
+       "x": 130.5,
+       "y": 133.605,
+       "layer": "F.SilkS",
+       "label": "'CAUX1' stroke 0.12 mm"
+      },
+      {
+       "x": 141.0,
+       "y": 130.805,
+       "layer": "F.SilkS",
+       "label": "'CINT1' stroke 0.12 mm"
+      },
+      {
+       "x": 212.405,
+       "y": 163.8,
+       "layer": "F.SilkS",
+       "label": "'C3' stroke 0.12 mm"
+      },
+      {
+       "x": 200.205,
+       "y": 151.5,
+       "layer": "F.SilkS",
+       "label": "'CCS1' stroke 0.12 mm"
+      },
+      {
+       "x": 147.0,
+       "y": 166.35,
+       "layer": "F.SilkS",
+       "label": "'DLED2' stroke 0.12 mm"
+      },
+      {
+       "x": 185.575,
+       "y": 164.425,
+       "layer": "F.SilkS",
+       "label": "'U3' stroke 0.12 mm"
+      },
+      {
+       "x": 195.8,
+       "y": 159.205,
+       "layer": "F.SilkS",
+       "label": "'C2' stroke 0.12 mm"
+      },
+      {
+       "x": 167.165,
+       "y": 121.05,
+       "layer": "B.SilkS",
+       "label": "'CHF3' stroke 0.12 mm"
+      },
+      {
+       "x": 182.5,
+       "y": 118.795,
+       "layer": "B.SilkS",
+       "label": "'CSN1' stroke 0.12 mm"
+      },
+      {
+       "x": 169.705,
+       "y": 121.05,
+       "layer": "B.SilkS",
+       "label": "'CHF2' stroke 0.12 mm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PWR-FOUND",
+   "category": "power",
+   "title": "Power stage recognised",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-WIDTH",
+   "category": "power",
+   "title": "Power track width for the rated current",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-VIAS",
+   "category": "power",
+   "title": "Vias where the power path changes layer",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-SPACING",
+   "category": "power",
+   "title": "Spacing for 48 V (exposed pads)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-CONN",
+   "category": "power",
+   "title": "Input/output connectors",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-CAPV",
+   "category": "power",
+   "title": "Capacitor voltage ratings",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-LOOP",
+   "category": "power",
+   "title": "Hot loop: input capacitor at the switches",
+   "status": "skipped",
+   "skipped": "input side not identified",
+   "findings": []
+  },
+  {
+   "id": "PWR-GATE",
+   "category": "power",
+   "title": "Gate driver close to the MOSFETs",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "PWR-GATE",
+     "severity": "info",
+     "title": "Gate driver close to the MOSFETs",
+     "message": "Could not trace the gate of Q1 (/GH) to a driver IC. Check by hand that the driver is close and the gate loop is short.",
+     "fix": "",
+     "rule": "SMPS-014",
+     "refs": [
+      "Q1"
+     ],
+     "waived": "",
+     "locations": [
+      {
+       "x": 164.96,
+       "y": 117.25,
+       "layer": "",
+       "label": "Q1"
+      }
+     ]
+    },
+    {
+     "check": "PWR-GATE",
+     "severity": "info",
+     "title": "Gate driver close to the MOSFETs",
+     "message": "Could not trace the gate of Q2 (/GL) to a driver IC. Check by hand that the driver is close and the gate loop is short.",
+     "fix": "",
+     "rule": "SMPS-014",
+     "refs": [
+      "Q2"
+     ],
+     "waived": "",
+     "locations": [
+      {
+       "x": 172.58,
+       "y": 124.85,
+       "layer": "",
+       "label": "Q2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "PWR-BOOT",
+   "category": "power",
+   "title": "Bootstrap capacitor at the driver",
+   "status": "skipped",
+   "skipped": "no bootstrap capacitor found",
+   "findings": []
+  },
+  {
+   "id": "PWR-FB",
+   "category": "power",
+   "title": "Feedback divider and feedback routing",
+   "status": "skipped",
+   "skipped": "no FB pin found (KiCad needs pin names from the schematic)",
+   "findings": []
+  },
+  {
+   "id": "PWR-MAG",
+   "category": "power",
+   "title": "No tracks under inductors and transformers",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-THERMAL",
+   "category": "power",
+   "title": "Copper for cooling the power parts",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "PWR-GND",
+   "category": "power",
+   "title": "Ground pour",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-DECAP",
+   "category": "layout",
+   "title": "Decoupling capacitors at IC supply pins",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-ACUTE",
+   "category": "layout",
+   "title": "No acute track angles",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-CORNER",
+   "category": "layout",
+   "title": "Track corners at 45\u00b0",
+   "status": "info",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "LAY-CORNER",
+     "severity": "info",
+     "title": "Track corners at 45\u00b0",
+     "message": "7 track corner(s) are 90\u00b0. Use 45\u00b0 corners (or arcs).",
+     "fix": "",
+     "rule": "EST-001",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 139.0,
+       "y": 119.5,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /ITH"
+      },
+      {
+       "x": 145.5,
+       "y": 124.25,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /BOOST"
+      },
+      {
+       "x": 137.6,
+       "y": 114.6,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /SENSEP"
+      },
+      {
+       "x": 139.7,
+       "y": 121.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /INTVCC"
+      },
+      {
+       "x": 147.3,
+       "y": 116.5,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /INTVCC"
+      },
+      {
+       "x": 147.3,
+       "y": 117.5,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /INTVCC"
+      },
+      {
+       "x": 139.7,
+       "y": 120.0,
+       "layer": "F.Cu",
+       "label": "90\u00b0 on /INTVCC"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "LAY-DANGLE",
+   "category": "layout",
+   "title": "No dangling track ends",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "LAY-VIAPAD",
+   "category": "layout",
+   "title": "No open vias in SMD pads",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "TST-POINTS",
+   "category": "test",
+   "title": "Test points (EE463: verify supplies and gate signals)",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "TST-INFO",
+   "category": "test",
+   "title": "Board identification on the silkscreen",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "ASM-SPACING",
+   "category": "test",
+   "title": "Room between parts for hand soldering",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "ASM-SMALL",
+   "category": "test",
+   "title": "Part sizes you can hand-solder",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "MEC-HOLES",
+   "category": "test",
+   "title": "Mounting holes",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "DRC",
+   "category": "drc",
+   "title": "KiCad design rules check (DRC)",
+   "status": "warning",
+   "skipped": "",
+   "findings": [
+    {
+     "check": "DRC",
+     "severity": "info",
+     "title": "KiCad DRC: Silkscreen clipped by board edge (board setup constraints silk clearance 0.1500 mm; actual 0.0000 mm)",
+     "message": "1 x Silkscreen clipped by board edge (board setup constraints silk clearance 0.1500 mm; actual 0.0000 mm) (silk_edge_clearance)",
+     "fix": "Open the DRC window in KiCad (Inspect > Design Rules Checker) to see each one.",
+     "rule": "KiCad",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 100.0,
+       "y": 100.0,
+       "layer": "",
+       "label": "Rectangle on Edge.Cuts / Polygon of J2 on F.Silkscreen"
+      }
+     ]
+    },
+    {
+     "check": "DRC",
+     "severity": "warning",
+     "title": "KiCad DRC: Silkscreen clipped by solder mask",
+     "message": "15 x Silkscreen clipped by solder mask (silk_over_copper)",
+     "fix": "Silkscreen on a pad is not printed. Move the text or line off the pad.",
+     "rule": "KiCad",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 183.5,
+       "y": 163.205,
+       "layer": "",
+       "label": "Reference field of CERR1 / Pad 1 [/ITH] of RLEAK1 on F.Cu"
+      },
+      {
+       "x": 183.5,
+       "y": 163.205,
+       "layer": "",
+       "label": "Reference field of CERR1 / Pad 2 [/ERRN] of RLEAK1 on F.Cu"
+      },
+      {
+       "x": 150.395,
+       "y": 125.6,
+       "layer": "",
+       "label": "Reference field of CBOOT1 / Pad 2 [GND] of CDRV1 on F.Cu"
+      },
+      {
+       "x": 185.575,
+       "y": 164.425,
+       "layer": "",
+       "label": "Reference field of U3 / Pad 2 [/ERRN] of RLEAK1 on F.Cu"
+      },
+      {
+       "x": 135.5,
+       "y": 131.005,
+       "layer": "",
+       "label": "Reference field of CITH1 / Pad 1 [/ITH] of CITHP1 on F.Cu"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "",
+       "label": "Reference field of CVCAP1 / Pad 3 [/VIN_RAW] of U5 on F.Cu"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "",
+       "label": "Reference field of CVCAP1 / Pad 2 [GND] of U5 on F.Cu"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "",
+       "label": "Reference field of CVCAP1 / Pad 1 [/IDVCAP] of U5 on F.Cu"
+      },
+      {
+       "x": 135.5,
+       "y": 133.605,
+       "layer": "",
+       "label": "Reference field of CITHP1 / Pad 1 [/INTVCC] of RPG1 on F.Cu"
+      },
+      {
+       "x": 135.5,
+       "y": 133.605,
+       "layer": "",
+       "label": "Reference field of CITHP1 / Pad 2 [/PGOOD] of RPG1 on F.Cu"
+      },
+      {
+       "x": 135.5,
+       "y": 131.005,
+       "layer": "",
+       "label": "Reference field of CITH1 / Pad 2 [GND] of CITHP1 on F.Cu"
+      },
+      {
+       "x": 141.0,
+       "y": 130.805,
+       "layer": "",
+       "label": "Reference field of CINT1 / Pad 1 [/FREQ] of RFREQ1 on F.Cu"
+      },
+      {
+       "x": 141.0,
+       "y": 130.805,
+       "layer": "",
+       "label": "Reference field of CINT1 / Pad 2 [GND] of RFREQ1 on F.Cu"
+      },
+      {
+       "x": 167.165,
+       "y": 121.05,
+       "layer": "",
+       "label": "Reference field of CHF3 / Pad 2 [GND] of CHF2 on B.Cu"
+      },
+      {
+       "x": 167.165,
+       "y": 121.05,
+       "layer": "",
+       "label": "Reference field of CHF3 / Pad 1 [/VIN] of CHF2 on B.Cu"
+      }
+     ]
+    },
+    {
+     "check": "DRC",
+     "severity": "warning",
+     "title": "KiCad DRC: Silkscreen clearance (board setup constraints silk clearance 0.1500 mm; actual 0.0955 mm)",
+     "message": "23 x Silkscreen clearance (board setup constraints silk clearance 0.1500 mm; actual 0.0955 mm) (silk_overlap)",
+     "fix": "Overlapping silkscreen is unreadable. Move one of them.",
+     "rule": "KiCad",
+     "refs": [],
+     "waived": "",
+     "locations": [
+      {
+       "x": 183.5,
+       "y": 163.205,
+       "layer": "",
+       "label": "Reference field of CERR1 / PCB text 'CL LOOP' on F.Silkscreen"
+      },
+      {
+       "x": 183.273,
+       "y": 163.265,
+       "layer": "",
+       "label": "Segment of RLEAK1 on F.Silkscreen / Reference field of CERR1"
+      },
+      {
+       "x": 150.395,
+       "y": 125.6,
+       "layer": "",
+       "label": "Reference field of CBOOT1 / Reference field of CDRV1"
+      },
+      {
+       "x": 150.395,
+       "y": 125.6,
+       "layer": "",
+       "label": "Reference field of CBOOT1 / Segment of CDRV1 on F.Silkscreen"
+      },
+      {
+       "x": 124.0,
+       "y": 169.0,
+       "layer": "",
+       "label": "PCB text 'ON/OFF' on F.Silkscreen / Reference field of SW1"
+      },
+      {
+       "x": 121.59,
+       "y": 170.74,
+       "layer": "",
+       "label": "Segment of SW1 on F.Silkscreen / Reference field of SW1"
+      },
+      {
+       "x": 108.0,
+       "y": 134.0,
+       "layer": "",
+       "label": "PCB text 'IN 20-48 V' on F.Silkscreen / Segment of J1 on F.Silkscreen"
+      },
+      {
+       "x": 108.0,
+       "y": 134.0,
+       "layer": "",
+       "label": "PCB text 'IN 20-48 V' on F.Silkscreen / Segment of J1 on F.Silkscreen"
+      },
+      {
+       "x": 135.5,
+       "y": 131.005,
+       "layer": "",
+       "label": "Reference field of CITH1 / Segment of CITHP1 on F.Silkscreen"
+      },
+      {
+       "x": 119.8,
+       "y": 121.205,
+       "layer": "",
+       "label": "Reference field of CANODE1 / Segment of F1 on F.Silkscreen"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "",
+       "label": "Reference field of CVCAP1 / Reference field of Q3"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "",
+       "label": "Reference field of CVCAP1 / Segment of U5 on F.Silkscreen"
+      },
+      {
+       "x": 118.05,
+       "y": 113.49,
+       "layer": "",
+       "label": "Polygon of U5 on F.Silkscreen / Reference field of CVCAP1"
+      },
+      {
+       "x": 118.005,
+       "y": 113.6,
+       "layer": "",
+       "label": "Reference field of CVCAP1 / Segment of U5 on F.Silkscreen"
+      },
+      {
+       "x": 123.65,
+       "y": 111.26,
+       "layer": "",
+       "label": "Segment of Q3 on F.Silkscreen / Reference field of CVCAP1"
+      },
+      {
+       "x": 101.65,
+       "y": 123.34,
+       "layer": "",
+       "label": "Segment of J1 on F.Silkscreen / PCB text 'IN 20-48 V' on F.Silkscreen"
+      },
+      {
+       "x": 108.0,
+       "y": 134.0,
+       "layer": "",
+       "label": "PCB text 'IN 20-48 V' on F.Silkscreen / Segment of J1 on F.Silkscreen"
+      },
+      {
+       "x": 103.0,
+       "y": 131.1,
+       "layer": "",
+       "label": "PCB text '-' on F.Silkscreen / Segment of J1 on F.Silkscreen"
+      },
+      {
+       "x": 103.0,
+       "y": 126.0,
+       "layer": "",
+       "label": "PCB text '+' on F.Silkscreen / Segment of J1 on F.Silkscreen"
+      },
+      {
+       "x": 135.273,
+       "y": 133.265,
+       "layer": "",
+       "label": "Segment of RPG1 on F.Silkscreen / Reference field of CITHP1"
+      },
+      {
+       "x": 141.0,
+       "y": 130.805,
+       "layer": "",
+       "label": "Reference field of CINT1 / Segment of RFREQ1 on F.Silkscreen"
+      },
+      {
+       "x": 152.0,
+       "y": 170.0,
+       "layer": "",
+       "label": "PCB text '12 V / 60 W synchronous buck  -  RevG  -  METU 202 / PCB text 'Yasin Baytemir' on B.Silkscreen"
+      },
+      {
+       "x": 167.165,
+       "y": 121.05,
+       "layer": "",
+       "label": "Reference field of CHF3 / Segment of CHF2 on B.Silkscreen"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "DRC-UNROUTED",
+   "category": "drc",
+   "title": "Everything routed",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  },
+  {
+   "id": "DRC-PARITY",
+   "category": "drc",
+   "title": "Board matches the schematic",
+   "status": "pass",
+   "skipped": "",
+   "findings": []
+  }
+ ],
+ "notes": []
+}
